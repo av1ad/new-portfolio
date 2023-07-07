@@ -143,7 +143,6 @@
 .project-card__image {
   width: 100%;
   height: 20rem;
-  background-image: url("../../assets/images/chat.png");
   border-radius: inherit;
   margin-bottom: 2rem;
 }
