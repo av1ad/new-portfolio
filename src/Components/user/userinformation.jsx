@@ -12,7 +12,7 @@ const UserInformation = () => {
         <p className='user-card__header__title'>Web Developer</p>
       </section>
       <section className='user-card__image'>
-        <img className='user-card__image__photo' src={userPicture} alt='Picture of Ronald Harsh' tabIndex="-1"/>
+        <img className='user-card__image__photo' src={userPicture} alt='Picture of Aviad Churaman' tabIndex="-1"/>
       </section>
       <section className='user-card__footer'>
         <a href="mailto:ronald.harsh@protonmail.com" className='user-card__footer__email'>aviadchuraman@gmail.com</a>
