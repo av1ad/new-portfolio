@@ -1,0 +1,227 @@
+@use '../../../node_modules/@unsass/breakpoint';
+
+.navbar {
+    position: relative;
+    @include breakpoint.up("md") {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+
+    @include breakpoint.up("md") {
+        visibility: hidden;
+    }
+
+    z-index: 100;
+}
+
+.navbar .toggle {
+    position: fixed;
+    cursor: pointer;
+}
+
+.toggle {
+    top: 30px;
+    right: 40px;
+    border: 2px solid #fff;
+    color: #F9F9F9;
+    font-size: 1rem;
+    border: 1px solid #999999;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+
+    :hover {
+        color: #28e98c;
+        border: 1px solid #28e98c;
+    }
+}
+
+.menu-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    list-style: none;
+    top: 0;
+    background: #fff;
+    width: 0;
+    overflow: hidden;
+    max-width: 100%;
+    z-index: 9;
+    font-size: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+    transform: translateX(400px);
+    transition: transform ease-in-out 0.2s;
+    background-color: #191919;
+
+    h3 {
+        @include breakpoint.up("md") {
+            display: none;
+        }
+    }
+
+    p {
+        @include breakpoint.up("md") {
+            display: none;
+        }
+    }
+
+    p {
+        cursor: pointer;
+        transition: hover .2s ease-in-out;
+
+        :hover {
+            color: #28e98c;
+        }
+    }
+
+    @include breakpoint.up("md") {
+        position: fixed;
+        right: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 4rem;
+        border-radius: 40px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #565656;
+        transition: transform ease-in-out 0s;
+        background-color: #1f1f1f;
+    }
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+
+    @include breakpoint.up("md") {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.menu-nav.show-menu {
+    min-height: 100vh;
+    width: 100%;
+    opacity: 1;
+
+    @include breakpoint.down("md") {
+        transform: translateX(0px);
+    }
+
+    @include breakpoint.up("md") {
+        min-height: auto;
+    }
+}
+
+.white-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    opacity: 0;
+    background-color: #fff;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.white-screen.show-white {
+    opacity: 0.1;
+
+    @include breakpoint.up("md") {
+        display: none;
+    }
+}
+
+.menu-nav li a, .menu-nav li span {
+    display: block;
+    padding: 1rem 2rem;
+    color: #F9F9F9;
+    text-decoration: none;
+    transition: background 0.2s ease-in-out;
+}
+
+p {
+    color: #999999;
+    font-size: 16px;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+.logo {
+    display: none;
+    @include breakpoint.up("md") {
+        display: block;
+    }
+}
+
+.inner-menu {
+    color: #999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    padding-left: 4rem;
+    gap: 2rem;
+
+    @include breakpoint.up("md") {
+        padding: 0;
+        align-items: center;
+        padding: 2rem 0;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+
+    @include breakpoint.up("md") {
+        display: none;
+    }
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.link-holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-wrapper {
+    cursor: pointer;
+}
+
+.active-link .icon-wrapper {
+    color: #28e98c
+}

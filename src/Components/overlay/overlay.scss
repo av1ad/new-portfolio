@@ -1,0 +1,51 @@
+@use '../../../node_modules/@unsass/breakpoint';
+
+.overlay {
+    position: fixed;
+    max-width:  1440px;
+    position:   fixed;
+    width:      100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+
+    @include breakpoint.down("sm") {
+        visibility: hidden;
+    }
+
+    &__social {
+        position:  absolute;
+        right:     1rem;
+        bottom:    0;
+        background-color: red;
+        width: 1px;
+        height: 6rem;
+    }
+
+    &__email {
+        position:   absolute;
+        left:       0;
+        bottom:     0;
+        background-color: black;
+        width: 1px;
+        height: 6rem;
+        
+        p {
+            position: absolute;
+            left: .5rem;
+            color: black;
+            transform: rotate(-90deg);
+            transform-origin: bottom left;
+            padding-left: 1.6rem;
+            transition: padding-left .2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                padding-left: 2rem;
+            }
+        }
+    }
+}
