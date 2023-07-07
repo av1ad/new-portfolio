@@ -113,7 +113,7 @@ const home = () => {
                 </div>
                 <article className="award-container">
                     <div className="award-container__header">
-                        <h2>Scrimba's Frontend Developeer Career</h2>
+                        <h2>Scrimba Frontend Developeer Career</h2>
                         <p>2021-2023</p>
                     </div>
                     <div className="award-container__body">
