@@ -1,7 +1,8 @@
 import React from 'react'
 
 import '../../assets/css/userinformation.css'
-import userPicture from '../../assets/images/aviad.jpg'
+import userPicture from '../../assets/images/aviad.JPG'
+import { GitHub, Instagram, Mail, Twitter } from 'react-feather'
 
 const UserInformation = () => {
   return (
