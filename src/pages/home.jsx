@@ -102,7 +102,7 @@ const home = () => {
                         <h2>Areas of Study:</h2>
                         <ul>
                             <li data-aos="fade-right"><p><span className="highlight">Communication</span>: Harness excellent communication skills to foster effective collaboration, streamline processes, and ensure clarity and alignment within project teams.</p></li>
-                            <li data-aos="fade-left"><p><span className="highlight">Creativty</span>: I've attended tons of creative classes such as fashion design and just regular art classes which lead me to what I do now which is web development, I love being creative.</p></li>
+                            <li data-aos="fade-left"><p><span className="highlight">Creativity</span>: I've attended tons of creative classes such as fashion design and just regular art classes which lead me to what I do now which is web development, I love being creative.</p></li>
                         </ul>
                     </div>
                 </article>
@@ -149,7 +149,7 @@ const home = () => {
             </section>
             <section id="services" data-aos="fade-up">
                 <div className="slug">
-                    <h2><Grid size={14} role="none"/>Services</h2>
+                    <h2><Grid size={14} role="none"/>Skillsets</h2>
                 </div>
                 <article className="service-card" data-aos="fade-left">
                     <div className="service-card__header">
