@@ -92,6 +92,11 @@
   font-size: 1rem;
   color: #fff;
 }
+.user-card__footer__resume {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
 .user-card__footer__based {
   font-size: 1.2rem;
   color: #fff;
