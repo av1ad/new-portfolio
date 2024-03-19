@@ -16,8 +16,6 @@ import {
   Zap,
 } from "react-feather";
 
-import splash from "../assets/images/splash-wallpaper.png";
-import travel from "../assets/images/travel-journal.png";
 import cardealership from "../assets/images/cardealership.png";
 import chattergrape from "../assets/images/chattergrape.png";
 import enjoyingtheoutdoors from "../assets/images/enjoyingtheoutdoors.png";
