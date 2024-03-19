@@ -156,7 +156,7 @@ const navbar = () => {
                 <span className="icon-wrapper">
                   <Award size={16} />
                 </span>
-                <p>Awards</p>
+                <p>Certificates</p>
               </ScrollLink>
             </li>
 
@@ -192,7 +192,7 @@ const navbar = () => {
                 <span className="icon-wrapper">
                   <Grid size={16} />
                 </span>
-                <p>Services</p>
+                <p>Skillset</p>
               </ScrollLink>
             </li>
           </ul>
