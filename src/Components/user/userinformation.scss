@@ -16,7 +16,7 @@
         font-weight: 500;
 
         &:hover {
-            color:#28e98c;
+            color:#a86fcb;
         }
     }
 
@@ -37,7 +37,7 @@
         align-items: center;
         gap: 1rem;
         margin-top: 2rem;
-        background-color: #28e98c;
+        background-color: #a86fcb;
         padding: 1rem;
         border-radius: 40px;
         color: #1f1f1f;
@@ -47,8 +47,8 @@
 
     &:hover {
         background-color: transparent;
-        color: #28e98c;
-        border: 1px solid #28e98c;
+        color: #a86fcb;
+        border: 1px solid #a86fcb;
     }
     }
 
@@ -87,7 +87,7 @@
         &__title {
             text-align: right;
             line-height: 1.2rem;
-            color: #28e98c;
+            color: #a86fcb;
         }
     }
 
@@ -133,7 +133,7 @@
 
     &:hover {
         cursor: pointer;
-        border: 1px solid #28e98c;
-        color: #28e98c;
+        border: 1px solid #a86fcb;
+        color: #a86fcb;
     }
 }

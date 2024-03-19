@@ -43,8 +43,8 @@ button {
     background-color: #1f1f1f;
 
     :hover {
-        color: #28e98c;
-        border: 1px solid #28e98c;
+        color: #a86fcb;
+        border: 1px solid #a86fcb;
     }
 }
 
@@ -83,7 +83,7 @@ button {
         transition: hover .2s ease-in-out;
 
         :hover {
-            color: #28e98c;
+            color: #a86fcb;
         }
     }
 
@@ -223,5 +223,5 @@ p {
 }
 
 .active-link .icon-wrapper {
-    color: #28e98c
+    color: #a86fcb
 }
