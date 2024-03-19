@@ -18,6 +18,9 @@ import {
 
 import splash from "../assets/images/splash-wallpaper.png";
 import travel from "../assets/images/travel-journal.png";
+import cardealership from "../assets/images/cardealership.png";
+import chattergrape from "../assets/images/chattergrape.png";
+import enjoyingtheoutdoors from "../assets/images/enjoyingtheoutdoors.png";
 
 const home = () => {
   return (
@@ -310,7 +313,7 @@ const home = () => {
               mountain.
             </p>
             <img
-              src={splash}
+              src={enjoyingtheoutdoors}
               className="project-image"
               alt="Screenshot of the Interactive Dictionary project"
             />
@@ -333,7 +336,7 @@ const home = () => {
               vehicles based on various criteria.
             </p>
             <img
-              src={travel}
+              src={cardealership}
               className="project-image"
               alt="Screenshot of the Interactive GitHub User Search project"
             />
@@ -356,7 +359,7 @@ const home = () => {
               for of 3 for this project.
             </p>
             <img
-              src={travel}
+              src={chattergrape}
               className="project-image"
               alt="Screenshot of the Interactive GitHub User Search project"
             />
