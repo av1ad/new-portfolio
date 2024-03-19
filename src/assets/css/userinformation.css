@@ -14,7 +14,7 @@
   font-weight: 500;
 }
 .user-card a:hover {
-  color: #28e98c;
+  color: #a86fcb;
 }
 @media (min-width: 1080px) {
   .user-card {
@@ -34,7 +34,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
-  background-color: #28e98c;
+  background-color: #a86fcb;
   padding: 1rem;
   border-radius: 40px;
   color: #1f1f1f;
@@ -44,8 +44,8 @@
 }
 .user-card .contact-button:hover {
   background-color: transparent;
-  color: #28e98c;
-  border: 1px solid #28e98c;
+  color: #a86fcb;
+  border: 1px solid #a86fcb;
 }
 .user-card__image {
   height: 18rem;
@@ -78,7 +78,7 @@
 .user-card__header__title {
   text-align: right;
   line-height: 1.2rem;
-  color: #28e98c;
+  color: #a86fcb;
 }
 .user-card__footer {
   margin-top: 2rem;
@@ -117,6 +117,6 @@
 }
 .social-button:hover {
   cursor: pointer;
-  border: 1px solid #28e98c;
-  color: #28e98c;
+  border: 1px solid #a86fcb;
+  color: #a86fcb;
 }/*# sourceMappingURL=userinformation.css.map */

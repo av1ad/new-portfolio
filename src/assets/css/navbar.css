@@ -43,8 +43,8 @@ button {
   background-color: #1f1f1f;
 }
 .toggle :hover {
-  color: #28e98c;
-  border: 1px solid #28e98c;
+  color: #a86fcb;
+  border: 1px solid #a86fcb;
 }
 
 .menu-nav {
@@ -80,7 +80,7 @@ button {
   transition: hover 0.2s ease-in-out;
 }
 .menu-nav p :hover {
-  color: #28e98c;
+  color: #a86fcb;
 }
 @media (min-width: 768px) {
   .menu-nav {
@@ -226,5 +226,5 @@ p {
 }
 
 .active-link .icon-wrapper {
-  color: #28e98c;
+  color: #a86fcb;
 }/*# sourceMappingURL=navbar.css.map */

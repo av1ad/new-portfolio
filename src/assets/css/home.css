@@ -32,7 +32,7 @@
   }
 }
 .container form input:focus {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
   outline: 0 none;
 }
 .container form textarea {
@@ -45,7 +45,7 @@
   outline: 1px solid #999999;
 }
 .container form textarea:focus {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
   outline: 0 none;
 }
 @media (min-width: 320px) and (max-width: 1079px) {
@@ -102,7 +102,7 @@
 }
 
 .highlight {
-  color: #28e98c;
+  color: #a86fcb;
 }
 
 .slug {
@@ -138,7 +138,7 @@
   cursor: pointer;
 }
 .project-card:hover {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
 }
 .project-card__image {
   width: 100%;
@@ -154,7 +154,7 @@
 }
 .project-card a:hover {
   text-decoration: underline;
-  color: #28e98c;
+  color: #a86fcb;
 }
 
 .project-image {
@@ -182,12 +182,12 @@
 }
 .service-card__header h2 {
   font-size: 1.4rem !important;
-  color: #28e98c;
+  color: #a86fcb;
   font-weight: 500;
 }
 .service-card:hover {
   cursor: pointer;
-  border-color: #28e98c;
+  border-color: #a86fcb;
 }
 
 .urgent {
@@ -201,7 +201,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
-  background-color: #28e98c;
+  background-color: #a86fcb;
   padding: 1rem;
   border-radius: 40px;
   color: #1f1f1f;
@@ -212,8 +212,8 @@
 }
 .button:hover {
   background-color: transparent;
-  color: #28e98c;
-  border: 1px solid #28e98c;
+  color: #a86fcb;
+  border: 1px solid #a86fcb;
 }
 
 .skills-container {
@@ -235,7 +235,7 @@
   padding-bottom: 2rem;
 }
 .skills-container .skill:hover {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
 }
 .skills-container .skill img {
   max-width: 40%;
@@ -248,7 +248,7 @@
   width: 100%;
 }
 .skills-container .skill .skill__header i {
-  color: #28e98c;
+  color: #a86fcb;
   font-size: 1.6rem;
 }
 .skills-container .skill .skill__header h2 {
@@ -267,7 +267,7 @@
   overflow: hidden;
 }
 .education-tile:hover {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
 }
 .education-tile__body {
   display: flex;
@@ -325,7 +325,7 @@
   gap: 1rem;
 }
 .award-container:hover {
-  border: 1px solid #28e98c;
+  border: 1px solid #a86fcb;
 }
 .award-container__header {
   display: flex;
@@ -340,10 +340,10 @@
 }
 .award-container a {
   text-decoration: none;
-  color: #28e98c;
+  color: #a86fcb;
 }
 .award-container a:visited {
-  color: #28e98c;
+  color: #a86fcb;
 }
 .award-container a:hover {
   text-decoration: underline;
