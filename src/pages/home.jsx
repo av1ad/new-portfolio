@@ -20,8 +20,7 @@ const home = () => {
                     Say hi to <span className="highlight">Aviad,</span><br/>Frontend Web Developer.
                 </h1>
                 <p>
-                Dive into the exhilarating world of digital design and development with me! My canvas stretches across <span className="highlight">web, mobile, and desktop landscapes</span>, constantly bustling with innovative projects. Despite the excitement of my current endeavors, I'm perpetually primed for <span className="highlight">fresh opportunities</span> that stir my creativity. If you're interested in joining forces to craft digital masterpieces, don't hesitate to connect. <span className="highlight">Together</span>, let's shape the future of digital innovation!
-                </p>
+                I'm a passionate <span className="highlight">software developer</span> who loves to create engaging digital experiences. With a strong foundation in <span className="highlight">HTML, CSS, and JavaScript</span>, I enjoy building responsive and interactive websites. I leverage the power of <span className="highlight">Bootstrap</span> to create sleek and modern designs, while also diving into the world of web applications using <span className="highlight">ReactJS</span>. My skills extend beyond the web, as I'm proficient in <span className="highlight">Java</span> for crafting robust desktop and mobile applications.                </p>
             </section>
             <section id="about" data-aos="fade-up">
                 <div className='slug'>
@@ -57,6 +56,22 @@ const home = () => {
                         <img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/html-5.svg" alt="HTML5 Logo" />
                     </article>
 
+                    { /* Sass Skill */ }
+                    <article className="skill" data-aos="fade-right">
+                        <div className="skill__header">
+                            <h2>Sass</h2>
+                        </div>
+                        <img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/sass.svg" alt="SASS Logo" />
+                    </article>
+
+                    { /* Bootstrap Skill */ }
+                    <article className="skill" data-aos="fade-right">
+                        <div className="skill__header">
+                            <h2>Bootstrap</h2>
+                        </div>
+                        <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/bootstrap.svg" alt="Bootstrap Logo" />
+                    </article>
+
                     { /* JavaScript skill */}
                     <article className="skill" data-aos="fade-left">
                         <div className="skill__header">
@@ -73,13 +88,22 @@ const home = () => {
                         <img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/react.svg" alt="React Logo" />
                     </article>
 
-                    { /* Sass Skill */ }
+                    { /* Java Skill */ }
                     <article className="skill" data-aos="fade-right">
                         <div className="skill__header">
-                            <h2>Sass</h2>
+                            <h2>Java</h2>
                         </div>
-                        <img src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/sass.svg" alt="SASS Logo" />
+                        <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/java.svg" alt="Java Logo" />
                     </article>
+
+                    { /* Git Skill */ }
+                    <article className="skill" data-aos="fade-right">
+                        <div className="skill__header">
+                            <h2>Git</h2>
+                        </div>
+                        <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/git.svg" alt="Git Logo" />
+                    </article>
+
 
                 </div>
             </section>
@@ -106,6 +130,25 @@ const home = () => {
                         </ul>
                     </div>
                 </article>
+                <article className='education-tile'>
+                    <div className='education-tile__header'>
+                        <div className="education-tile__header__left">
+                            <h2>Pluralsight / YearUp</h2>
+                            <p>Tampa, FL</p>
+                        </div>
+                        <div className="education-tile__header__right">
+                            <h2><span className='highlight'>Coding Bootcamp</span></h2>
+                            <p>2023-2024</p>
+                        </div>
+                    </div>
+                    <div className="education-tile__body">
+                        <h2>Areas of Study:</h2>
+                        <ul>
+                            <li data-aos="fade-right"><p><span className="highlight">Experience</span>: Year Up is a leading one-year career development program with over 250 corporate partners that include professional training, and a six-month internship.</p></li>
+                            <li data-aos="fade-left"><p><span className="highlight">Experience</span>: Accrue 200+ hours of hands-on training in Software Development using HTML, CSS, JavaScript, and Java.</p></li>
+                        </ul>
+                    </div>
+                </article>
             </section>
             <section id="awards" data-aos="fade-up">
                 <div className='slug'>
@@ -122,6 +165,17 @@ const home = () => {
                         </p>
                     </div>
                 </article>
+
+                <article className="award-container">
+                    <div className="award-container__header">
+                        <h2>Frontend Developer 12-Week Immersive Developer Academy</h2>
+                        <p>2023-2024</p>
+                    </div>
+                    <div className="award-container__body">
+                        <p>
+                        Accrue 200+ hours of hands-on training in Software Development using HTML, CSS, JavaScript, and Java.                        </p>
+                    </div>
+                </article>
             </section>
             <section id="projects" data-aos="fade-up">
                 <div className='slug'>
@@ -131,18 +185,27 @@ const home = () => {
                     Featured <span className="highlight">Projects</span>
                 </h2>
                 <article className='project-card' data-aos="fade-left">
-                    <a href="https://creative-moxie-076da4.netlify.app/" target='_blank' rel="noopener noreferrer" aria-label='View the Splash Wallpaper Project'>Splash Wallpaper</a>
+                    <a href="https://github.com/jewelsonmyjeans/enjoy-the-outdoors-remake" target='_blank' rel="noopener noreferrer" aria-label='View the Enjoying The Outdoors Project'>Enjoying The Outdoors</a>
+                    <p class="highlight">HTML, CSS, Bootstrap, ReactJS, JavaScript</p>
                     <p>
-                        A splash wallpaper built with HTML, CSS, API, and Javascript
-                        This application was built as a challenge.
+                    This web application is designed to assist users in discovering national parks and mountains. Users have the ability to search for activities based on location or park type. Additionally, a dropdown menu allows users to select a specific mountain, providing them with detailed information about that particular mountain.
                     </p>
                     <img src={splash} className='project-image' alt="Screenshot of the Interactive Dictionary project" />
                 </article>
                 <article className='project-card' data-aos="fade-left">
-                    <a href="https://gorgeous-arithmetic-e2e15a.netlify.app/" target='_blank' rel="noopener noreferrer" aria-label='View the GitHub User Information Project'>Travel Journal</a>
+                    <a href="https://github.com/jewelsonmyjeans/CarDealership" target='_blank' rel="noopener noreferrer" aria-label='View the Car Dealership Project'>Car Dealership</a>
+                    <p class="highlight">Java</p>
                     <p>
-                        A simple one page website created using React.
-                        This application was built as part of a challenge and is apart of the Scrimba curriculum.
+                    The CarDealership application is a simple console-based application developed in Java. It allows users to interact with a virtual car dealership, providing functionalities such as viewing all vehicles, adding a vehicle, removing a vehicle, and finding vehicles based on various criteria.
+                    </p>
+                    <img src={travel} className='project-image' alt="Screenshot of the Interactive GitHub User Search project" />
+                </article>
+                <article className='project-card' data-aos="fade-left">
+                    <a href="https://github.com/jewelsonmyjeans/ChatterGrape" target='_blank' rel="noopener noreferrer" aria-label='View ChatterGrape'>ChatterGrape</a>
+                    <p class="highlight">HTML, CSS, Bootstrap, JavaScript, REST-API</p>
+                    <p>
+                    ChatterGrape allows users to register, login, logout, make post, delete post, like post, dislike post, and view their own profiles.
+                    This was a project I did to learn how to use REST-API's and how to use them in a web application alongside that I worked with a group for of 3 for this project.
                     </p>
                     <img src={travel} className='project-image' alt="Screenshot of the Interactive GitHub User Search project" />
                 </article>

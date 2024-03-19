@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../../assets/css/userinformation.css'
-import userPicture from '../../assets/images/aviad.jpg'
+import userPicture from '../../assets/images/aviad.jpeg'
 import { GitHub, Instagram, Mail, Twitter } from 'react-feather'
 
 const UserInformation = () => {
@@ -17,7 +17,7 @@ const UserInformation = () => {
       <section className='user-card__footer'>
         <a href="mailto:ronald.harsh@protonmail.com" className='user-card__footer__email'>aviadchuraman@gmail.com</a>
         <p className='user-card__footer__based'>Based in USA</p>
-        <p className='user-card__footer__copyright'>© 2023 Aviad Churaman; All rights reserved.</p>
+        <p className='user-card__footer__copyright'>© 2024 Aviad Churaman; All rights reserved.</p>
       </section>
     </div>
   )

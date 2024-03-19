@@ -6,7 +6,7 @@ const overlay = () => {
   return (
     <div className='overlay'>
       <section className='overlay__email'>
-        <p>ronald.harsh@protonmail.com</p>
+        <p>aviadchuraman@gmail.com</p>
       </section>
 
       <section className='overlay__social'>
