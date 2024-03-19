@@ -34,7 +34,7 @@ const home = () => {
           <h1 className="container__header">
             Say hi to <span className="highlight">Aviad,</span>
             <br />
-            Frontend Web Developer.
+            Software Developer.
           </h1>
           <p>
             I'm a passionate{" "}
