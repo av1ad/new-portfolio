@@ -119,6 +119,7 @@
   border: 1px solid #999999;
   border-radius: 50%;
   padding: 0.8rem;
+  color: #fff;
 }
 .social-button:hover {
   cursor: pointer;

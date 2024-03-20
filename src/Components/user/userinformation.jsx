@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
-import { GitHub, Instagram, Mail, Twitter } from "react-feather";
+import { GitHub, Mail, Linkedin } from "react-feather";
 
 const UserInformation = () => {
   return (
@@ -11,7 +11,7 @@ const UserInformation = () => {
         <p className="user-card__header__name" role="heading">
           Aviad
         </p>
-        <p className="user-card__header__title">Web Developer</p>
+        <p className="user-card__header__title">Software Developer</p>
       </section>
       <section className="user-card__image">
         <img

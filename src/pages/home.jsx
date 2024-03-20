@@ -160,6 +160,17 @@ const home = () => {
               />
             </article>
 
+            {/* mySQL Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>MySQL</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/bwks/vendor-icons-svg/master/mysql-logo.svg"
+                alt="MySQL Logo"
+              />
+            </article>
+
             {/* Git Skill */}
             <article className="skill" data-aos="fade-right">
               <div className="skill__header">
@@ -372,30 +383,57 @@ const home = () => {
           </div>
           <article className="service-card" data-aos="fade-left">
             <div className="service-card__header">
-              <h2>Website Design</h2>
-              <Figma size={16} role="none" color="#28e98c" />
+              <h2>Web Development</h2>
+              <Code size={16} role="none" color="#28e98c" />
             </div>
             <p>
-              Step into the thrilling world of bespoke digital design with
-              Figma! Together, we'll embark on an engaging, interactive journey
-              where your invaluable insights will be woven into each stage of
-              the design process. Witness your visions spring to life as we
-              collaborate to mold the perfect concept that's as unique as you
-              are. Let's shape your digital landscape together!
+              Proficient in web development technologies including HTML, CSS,
+              and JavaScript, with experience in modern frameworks like ReactJS.
+              Skilled in creating responsive and dynamic web applications that
+              provide seamless user experiences across various devices. Utilizes
+              Bootstrap and SASS to enhance the design and maintainability of
+              stylesheets, ensuring consistent and visually appealing
+              interfaces. Passionate about staying up-to-date with the latest
+              web development trends and best practices to deliver high-quality,
+              efficient, and maintainable code. Committed to creating accessible
+              and user-friendly web solutions that meet client requirements and
+              exceed user expectations.
             </p>
           </article>
           <article className="service-card" data-aos="fade-right">
             <div className="service-card__header">
-              <h2>Development</h2>
+              <h2>Backend Developerment</h2>
               <Code size={16} role="none" color="#28e98c" />
             </div>
             <p>
-              Get ready for a thrilling expedition into the dynamic world of
-              coding! I'll meticulously weave each strand of code, crafting the
-              perfect digital tapestry to bring your website or web application
-              to life. But this isn't just a solo act — it's a tandem venture.
-              You'll be included in every strategic twist and turn, enabling us
-              to seamlessly blend your vision into each line of code.
+              Experienced in backend development using Java and MySQL.
+              Proficient in designing and implementing robust and scalable
+              server-side applications. Skilled in writing clean, efficient, and
+              maintainable Java code, following best practices and design
+              patterns. Knowledgeable in database management using MySQL,
+              including data modeling, query optimization, and performance
+              tuning. Experienced in integrating frontend and backend components
+              to create seamless and responsive web applications. Committed to
+              writing secure and reliable code, implementing authentication and
+              authorization mechanisms, and following industry standards for
+              data protection. Continuously learning and adapting to new
+              technologies and frameworks to deliver high-quality backend
+              solutions.
+            </p>
+          </article>
+          <article className="service-card" data-aos="fade-right">
+            <div className="service-card__header">
+              <h2>Communication / Team Player</h2>
+              <Coffee size={16} role="none" color="#28e98c" />
+            </div>
+            <p>
+              Strong communicator with excellent teamwork abilities.
+              Collaborates effectively with cross-functional teams, including
+              designers, product managers, and other developers, to understand
+              requirements, provide technical insights, and deliver high-quality
+              results. Proactively communicates progress, challenges, and
+              solutions to stakeholders, ensuring transparency and alignment
+              throughout the development process.
             </p>
           </article>
         </section>
