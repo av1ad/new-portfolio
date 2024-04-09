@@ -30,7 +30,7 @@ const UserInformation = () => {
         </a>
         <p className="user-card__footer__based">Based in USA</p>
         <a
-          href="https://drive.google.com/file/d/1xzt94muo4Dk1PGVbJdwZYARu0LhXUNsA/view?usp=sharing"
+          href="https://drive.google.com/file/d/11StpWL5xpi8LRb-D8twJCmWl0IUHvB85/view?usp=sharing"
           className="user-card__footer__resume"
         >
           Resume
