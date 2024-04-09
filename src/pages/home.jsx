@@ -19,6 +19,7 @@ import {
 import cardealership from "../assets/images/cardealership.png";
 import chattergrape from "../assets/images/chattergrape.png";
 import enjoyingtheoutdoors from "../assets/images/enjoyingtheoutdoors.png";
+import spotifyprofile from "../assets/images/spotify.png";
 
 const home = () => {
   return (
@@ -336,6 +337,29 @@ const home = () => {
           <h2 className="container__header">
             Featured <span className="highlight">Projects</span>
           </h2>
+          <article className="project-card" data-aos="fade-right">
+            <a
+              href="https://github.com/jewelsonmyjeans/spotify-application"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Spotify Profile Project"
+            >
+              Spotify Profile
+            </a>
+            <p class="highlight">JavaScript, React.js, Node.js, Express.js</p>
+            <p>
+              This React application utilizes the Spotify API to display a
+              user's top artists, top tracks, recently played tracks, and public
+              playlists. Users can sort their top artists and tracks by all
+              time, this month, or the last 6 months, providing insights into
+              their music listening preferences and habits.
+            </p>
+            <img
+              src={spotifyprofile}
+              className="project-image"
+              alt="Screenshot of the Spotify Profile project"
+            />
+          </article>
           <article className="project-card" data-aos="fade-left">
             <a
               href="https://github.com/jewelsonmyjeans/enjoy-the-outdoors-remake"
@@ -357,10 +381,10 @@ const home = () => {
             <img
               src={enjoyingtheoutdoors}
               className="project-image"
-              alt="Screenshot of the Interactive Dictionary project"
+              alt="Screenshot of the Enjoying the Outdoors project"
             />
           </article>
-          <article className="project-card" data-aos="fade-left">
+          <article className="project-card" data-aos="fade-right">
             <a
               href="https://github.com/jewelsonmyjeans/CarDealership"
               target="_blank"
@@ -380,7 +404,7 @@ const home = () => {
             <img
               src={cardealership}
               className="project-image"
-              alt="Screenshot of the Interactive GitHub User Search project"
+              alt="Screenshot of the Car Dealership project"
             />
           </article>
           <article className="project-card" data-aos="fade-left">
@@ -403,7 +427,7 @@ const home = () => {
             <img
               src={chattergrape}
               className="project-image"
-              alt="Screenshot of the Interactive GitHub User Search project"
+              alt="Screenshot of the Microblogging Chattergrape project"
             />
           </article>
         </section>
