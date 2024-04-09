@@ -127,6 +127,17 @@ const home = () => {
               />
             </article>
 
+            {/* Tailwind Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>Tailwind CSS</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+                alt="Tailwind CSS Logo"
+              />
+            </article>
+
             {/* JavaScript skill */}
             <article className="skill" data-aos="fade-left">
               <div className="skill__header">
@@ -141,11 +152,33 @@ const home = () => {
             {/* ReactJS Skill */}
             <article className="skill" data-aos="fade-right">
               <div className="skill__header">
-                <h2>ReactJS</h2>
+                <h2>React.js</h2>
               </div>
               <img
                 src="https://raw.githubusercontent.com/get-icon/geticon/fc0f660daee147afb4a56c64e12bde6486b73e39/icons/react.svg"
-                alt="React Logo"
+                alt="ReactJS Logo"
+              />
+            </article>
+
+            {/* NodeJS Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>Node.js</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+                alt="NodeJS Logo"
+              />
+            </article>
+
+            {/* ExpressJS Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>Express.js</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+                alt="ExpressJS Logo"
               />
             </article>
 
