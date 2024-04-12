@@ -38,17 +38,23 @@ const home = () => {
             Software Developer.
           </h1>
           <p>
-            I'm a passionate{" "}
-            <span className="highlight">software developer</span> who loves to
-            create engaging digital experiences. With a strong foundation in{" "}
-            <span className="highlight">HTML, CSS, and JavaScript</span>, I
-            enjoy building responsive and interactive websites. I leverage the
-            power of <span className="highlight">Bootstrap</span> to create
-            sleek and modern designs, while also diving into the world of web
-            applications using <span className="highlight">ReactJS</span>. My
-            skills extend beyond the web, as I'm proficient in{" "}
-            <span className="highlight">Java</span> for crafting robust desktop
-            and mobile applications.{" "}
+            <p>
+              {" "}
+              I'm a passionate{" "}
+              <span className="highlight">software developer</span> who loves to
+              create engaging digital experiences. With a strong foundation in{" "}
+              <span className="highlight">HTML, CSS, and JavaScript</span>, I
+              enjoy building responsive and interactive websites. I leverage the
+              power of <span className="highlight">Bootstrap</span> to create
+              sleek and modern designs, while also diving into the world of web
+              applications using <span className="highlight">ReactJS</span>. My
+              skills extend beyond the frontend, as I'm proficient in{" "}
+              <span className="highlight">Node.js</span> and{" "}
+              <span className="highlight">Express</span> for building scalable
+              and efficient backend solutions. Additionally, I have expertise in{" "}
+              <span className="highlight">Java</span> for crafting robust
+              desktop and mobile applications.{" "}
+            </p>
           </p>
         </section>
         <section id="about" data-aos="fade-up">
@@ -338,22 +344,22 @@ const home = () => {
             Featured <span className="highlight">Projects</span>
           </h2>
           <article className="project-card" data-aos="fade-right">
-              <a
-                href="https://github.com/jewelsonmyjeans/spotify-application"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View the Spotify Profile Project"
-              >
-                Spotify Profile
-              </a>
-              <a
-                href="https://aviad-spotify-profile-24b1df1946bf.herokuapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View the Spotify Profile Project"
-              >
-                Live Preview
-              </a>
+            <a
+              href="https://github.com/jewelsonmyjeans/spotify-application"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Spotify Profile Project"
+            >
+              Spotify Profile
+            </a>
+            <a
+              href="https://aviad-spotify-profile-24b1df1946bf.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Spotify Profile Project"
+            >
+              Live Preview
+            </a>
             <p class="highlight">JavaScript, React.js, Node.js, Express.js</p>
             <p>
               This React application utilizes the Spotify API to display a
@@ -378,13 +384,13 @@ const home = () => {
               Enjoying The Outdoors
             </a>
             <a
-                href="https://jewelsonmyjeans.github.io/Capstone2_EnjoyTheOutdoors/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View the Enjoying the Outdoors Project"
-              >
-                Live Preview
-              </a>
+              href="https://jewelsonmyjeans.github.io/Capstone2_EnjoyTheOutdoors/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Enjoying the Outdoors Project"
+            >
+              Live Preview
+            </a>
             <p class="highlight">HTML, CSS, Bootstrap, ReactJS, JavaScript</p>
             <p>
               This web application is designed to assist users in discovering
@@ -433,14 +439,14 @@ const home = () => {
               ChatterGrape
             </a>
             <a
-                href="https://jewelsonmyjeans.github.io/ChatterGrape/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View the Chattergrape Project"
-              >
-                Live Preview
-              </a>
-            
+              href="https://jewelsonmyjeans.github.io/ChatterGrape/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the Chattergrape Project"
+            >
+              Live Preview
+            </a>
+
             <p class="highlight">HTML, CSS, Bootstrap, JavaScript, REST-API</p>
             <p>
               ChatterGrape allows users to register, login, logout, make post,
