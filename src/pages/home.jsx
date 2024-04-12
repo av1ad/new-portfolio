@@ -475,17 +475,22 @@ const home = () => {
               <Code size={16} role="none" color="#28e98c" />
             </div>
             <p>
-              Proficient in web development technologies including HTML, CSS,
-              and JavaScript, with experience in modern frameworks like ReactJS.
+              {" "}
+              Proficient in web development technologies including{" "}
+              <span className="highlight">HTML</span>,{" "}
+              <span className="highlight">CSS</span>, and{" "}
+              <span className="highlight">JavaScript</span>, with experience in
+              modern frameworks like <span className="highlight">ReactJS</span>.
               Skilled in creating responsive and dynamic web applications that
-              provide seamless user experiences across various devices. Utilizes
-              Bootstrap and SASS to enhance the design and maintainability of
-              stylesheets, ensuring consistent and visually appealing
-              interfaces. Passionate about staying up-to-date with the latest
-              web development trends and best practices to deliver high-quality,
-              efficient, and maintainable code. Committed to creating accessible
-              and user-friendly web solutions that meet client requirements and
-              exceed user expectations.
+              provide seamless user experiences across various devices. Utilizes{" "}
+              <span className="highlight">Bootstrap</span> and{" "}
+              <span className="highlight">SASS</span> to enhance the design and
+              maintainability of stylesheets, ensuring consistent and visually
+              appealing interfaces. Passionate about staying up-to-date with the
+              latest web development trends and best practices to deliver
+              high-quality, efficient, and maintainable code. Committed to
+              creating accessible and user-friendly web solutions that meet
+              client requirements and exceed user expectations.{" "}
             </p>
           </article>
           <article className="service-card" data-aos="fade-right">
@@ -494,19 +499,27 @@ const home = () => {
               <Code size={16} role="none" color="#28e98c" />
             </div>
             <p>
-              Experienced in backend development using Java and MySQL.
-              Proficient in designing and implementing robust and scalable
-              server-side applications. Skilled in writing clean, efficient, and
-              maintainable Java code, following best practices and design
-              patterns. Knowledgeable in database management using MySQL,
-              including data modeling, query optimization, and performance
-              tuning. Experienced in integrating frontend and backend components
-              to create seamless and responsive web applications. Committed to
+              Experienced in backend development using{" "}
+              <span className="highlight">Node.js</span>,{" "}
+              <span className="highlight">Express</span>, and{" "}
+              <span className="highlight">MySQL</span>. Proficient in designing
+              and implementing robust and scalable server-side applications.
+              Skilled in writing clean, efficient, and maintainable{" "}
+              <span className="highlight">JavaScript</span> code, following best
+              practices and design patterns. Knowledgeable in building RESTful
+              APIs using <span className="highlight">Express</span>, enabling
+              seamless communication between frontend and backend components.
+              Experienced in database management using{" "}
+              <span className="highlight">MySQL</span>, including data modeling,
+              query optimization, and performance tuning. Adept at leveraging
+              the power of <span className="highlight">Node.js</span> to create
+              high-performance and event-driven backend solutions. Committed to
               writing secure and reliable code, implementing authentication and
               authorization mechanisms, and following industry standards for
               data protection. Continuously learning and adapting to new
-              technologies and frameworks to deliver high-quality backend
-              solutions.
+              technologies and frameworks in the{" "}
+              <span className="highlight">Node.js</span> ecosystem to deliver
+              cutting-edge backend solutions.
             </p>
           </article>
           <article className="service-card" data-aos="fade-right">
