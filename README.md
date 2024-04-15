@@ -21,6 +21,7 @@ The website is live at [aviadchuraman.com](https://aviadchuraman.com)
 
 - HTML
 - CSS
+- [SASS](https://sass-lang.com/)
 - JavaScript
 - [React](https://react.dev/)
 
