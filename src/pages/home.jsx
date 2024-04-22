@@ -8,10 +8,8 @@ import {
   Box,
   Code,
   Coffee,
-  Figma,
   Grid,
   Home,
-  Mail,
   User,
   Zap,
 } from "react-feather";
@@ -40,7 +38,7 @@ const home = () => {
           <p>
             <p>
               {" "}
-              I'm a passionate{" "}
+              I`m a passionate{" "}
               <span className="highlight">software developer</span> who loves to
               create engaging digital experiences. With a strong foundation in{" "}
               <span className="highlight">HTML, CSS, and JavaScript</span>, I
@@ -48,7 +46,7 @@ const home = () => {
               power of <span className="highlight">Bootstrap</span> to create
               sleek and modern designs, while also diving into the world of web
               applications using <span className="highlight">ReactJS</span>. My
-              skills extend beyond the frontend, as I'm proficient in{" "}
+              skills extend beyond the frontend, as I`m proficient in{" "}
               <span className="highlight">Node.js</span> and{" "}
               <span className="highlight">Express</span> for building scalable
               and efficient backend solutions. Additionally, I have expertise in{" "}
@@ -70,7 +68,7 @@ const home = () => {
           <p>
             Welcome to my world as a web developer, where I weave captivating
             narratives through the art of code. Since{" "}
-            <span className="highlight">2021</span>, I've been immersed in the
+            <span className="highlight">2021</span>, I`ve been immersed in the
             dynamic currents of modern web development, curating an extensive
             toolkit of state-of-the-art solutions.
           </p>
@@ -80,7 +78,7 @@ const home = () => {
             years I have learned a multitude of technologies and practices.
           </p>
           <p>
-            When I'm not crafting digital masterpieces, you'll find me indulging
+            When I`m not crafting digital masterpieces, you`ll find me indulging
             myself in being even more creative, I find myself creating every
             day, whether it be reading a book or sewing clothes I try my best to
             keep my mind busy.
@@ -88,7 +86,7 @@ const home = () => {
           <p>
             2021 marked a pivotal chapter in my life, as I tied the knot and
             embarked on an exhilarating new life journey. I would be honored if
-            you chose to be a part of this ongoing, thrilling narrative. Let's
+            you chose to be a part of this ongoing, thrilling narrative. Let`s
             script our success <span className="highlight">story together</span>
             !
           </p>
@@ -189,6 +187,17 @@ const home = () => {
               />
             </article>
 
+            {/* GraphQL Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>GraphQL</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg"
+                alt="GraphQL Logo"
+              />
+            </article>
+
             {/* Java Skill */}
             <article className="skill" data-aos="fade-right">
               <div className="skill__header">
@@ -255,7 +264,7 @@ const home = () => {
                 </li>
                 <li data-aos="fade-left">
                   <p>
-                    <span className="highlight">Creativity</span>: I've attended
+                    <span className="highlight">Creativity</span>: I`ve attended
                     tons of creative classes such as fashion design and just
                     regular art classes which lead me to what I do now which is
                     web development, I love being creative.
@@ -360,10 +369,10 @@ const home = () => {
             >
               Live Preview
             </a>
-            <p class="highlight">JavaScript, React.js, Node.js, Express.js</p>
+            <p className="highlight">JavaScript, React.js, Node.js, Express.js</p>
             <p>
               This React application utilizes the Spotify API to display a
-              user's top artists, top tracks, recently played tracks, and public
+              user`s top artists, top tracks, recently played tracks, and public
               playlists. Users can sort their top artists and tracks by all
               time, this month, or the last 6 months, providing insights into
               their music listening preferences and habits.
@@ -391,7 +400,7 @@ const home = () => {
             >
               Live Preview
             </a>
-            <p class="highlight">HTML, CSS, Bootstrap, ReactJS, JavaScript</p>
+            <p className="highlight">HTML, CSS, Bootstrap, ReactJS, JavaScript</p>
             <p>
               This web application is designed to assist users in discovering
               national parks and mountains. Users have the ability to search for
@@ -415,7 +424,7 @@ const home = () => {
             >
               Car Dealership
             </a>
-            <p class="highlight">Java</p>
+            <p className="highlight">Java</p>
             <p>
               The CarDealership application is a simple console-based
               application developed in Java. It allows users to interact with a
@@ -447,11 +456,11 @@ const home = () => {
               Live Preview
             </a>
 
-            <p class="highlight">HTML, CSS, Bootstrap, JavaScript, REST-API</p>
+            <p className="highlight">HTML, CSS, Bootstrap, JavaScript, REST-API</p>
             <p>
               ChatterGrape allows users to register, login, logout, make post,
               delete post, like post, dislike post, and view their own profiles.
-              This was a project I did to learn how to use REST-API's and how to
+              This was a project I did to learn how to use REST-API`s and how to
               use them in a web application alongside that I worked with a group
               for of 3 for this project.
             </p>
