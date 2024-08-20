@@ -1,4 +1,5 @@
 import React from "react";
+import Pdf from "../../assets/Aviad_Churaman_Resume.pdf";
 
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
@@ -30,8 +31,9 @@ const UserInformation = () => {
         </a>
         <p className="user-card__footer__based">Based in USA</p>
         <a
-          href="https://drive.google.com/file/d/11StpWL5xpi8LRb-D8twJCmWl0IUHvB85/view?usp=sharing"
-          className="user-card__footer__resume"
+          href={Pdf}
+          target="_blank"
+          className="user-card__footer__resume" rel="noreferrer"
         >
           Resume
         </a>
