@@ -209,6 +209,28 @@ const home = () => {
               />
             </article>
 
+            {/* Python Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>Python</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/python.svg"
+                alt="Python Logo"
+              />
+            </article>
+
+            {/* C++ Skill */}
+            <article className="skill" data-aos="fade-right">
+              <div className="skill__header">
+                <h2>C++</h2>
+              </div>
+              <img
+                src="https://raw.githubusercontent.com/jmnote/z-icons/refs/heads/master/svg/cpp.svg"
+                alt="C++ Logo"
+              />
+            </article>
+
             {/* mySQL Skill */}
             <article className="skill" data-aos="fade-right">
               <div className="skill__header">
