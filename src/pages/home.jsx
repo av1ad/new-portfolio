@@ -1,5 +1,3 @@
-import React from "react";
-
 import UserInformation from "../Components/user/userinformation";
 import "../assets/css/home.css";
 import {
