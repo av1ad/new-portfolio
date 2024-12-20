@@ -1,5 +1,3 @@
-import React from 'react'
-import Overlay from './Components/overlay/overlay'
 import Navbar from './Components/navbar/navbar'
 import Home from './pages/home'
 

@@ -1,9 +1,7 @@
-import React from "react";
 import Pdf from "../../assets/Aviad_Churaman_Resume.pdf";
 
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
-import { GitHub, Mail, Linkedin } from "react-feather";
 
 const UserInformation = () => {
   return (

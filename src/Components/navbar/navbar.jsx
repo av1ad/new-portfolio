@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import "../../assets/css/navbar.css";
 
@@ -8,12 +8,8 @@ import {
   Award,
   Book,
   Box,
-  GitHub,
   Grid,
   Home,
-  Instagram,
-  Mail,
-  Twitter,
   User,
   Zap,
 } from "react-feather";
@@ -21,7 +17,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 const navbar = () => {
   const ref = useRef();
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
