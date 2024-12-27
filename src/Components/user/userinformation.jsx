@@ -1,15 +1,12 @@
 import Pdf from "../../assets/Aviad_Churaman_Resume.pdf";
-
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
 
-const UserInformation = () => {
+const UserInformationContent = () => {
   return (
     <div className="user-card">
       <section className="user-card__header">
-        <p className="user-card__header__name" role="heading">
-          Aviad
-        </p>
+        <h1 className="user-card__header__name">Aviad Churaman</h1>
         <p className="user-card__header__title">Software Developer</p>
       </section>
       <section className="user-card__image">
@@ -31,7 +28,8 @@ const UserInformation = () => {
         <a
           href={Pdf}
           target="_blank"
-          className="user-card__footer__resume" rel="noreferrer"
+          className="user-card__footer__resume" 
+          rel="noreferrer"
         >
           Resume
         </a>
@@ -43,4 +41,4 @@ const UserInformation = () => {
   );
 };
 
-export default UserInformation;
+export default UserInformationContent;

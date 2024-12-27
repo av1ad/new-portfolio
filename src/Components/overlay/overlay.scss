@@ -1,51 +1,53 @@
-@use '../../../node_modules/@unsass/breakpoint';
+@use "../../../node_modules/@unsass/breakpoint";
+@use "../../gvars.scss" as *;
 
 .overlay {
-    position: fixed;
-    max-width:  1440px;
-    position:   fixed;
-    width:      100%;
-    min-height: 100vh;
-    top: 0;
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+
+  @include breakpoint.down("sm") {
+    visibility: hidden;
+  }
+
+  &__social {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    background-color: map-get($colors, "border");
+    width: 1px;
+    height: 6rem;
+  }
+
+  &__email {
+    position: absolute;
     left: 0;
-    right: 0;
-    margin: auto;
-    
+    bottom: 0;
+    background-color: map-get($colors, "border");
+    width: 1px;
+    height: 6rem;
 
-    @include breakpoint.down("sm") {
-        visibility: hidden;
+    p {
+      position: absolute;
+      left: 0.5rem;
+      color: map-get($colors, "text");
+      transform: rotate(-90deg);
+      transform-origin: bottom left;
+      padding-left: map-get($spacing, "xl");
+      transition: padding-left map-get($transitions, "normal") ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        padding-left: 2rem;
+        padding-left: map-get($spacing, "2xl");
+        color: map-get($colors, "primary");
+      }
     }
-
-    &__social {
-        position:  absolute;
-        right:     1rem;
-        bottom:    0;
-        background-color: red;
-        width: 1px;
-        height: 6rem;
-    }
-
-    &__email {
-        position:   absolute;
-        left:       0;
-        bottom:     0;
-        background-color: black;
-        width: 1px;
-        height: 6rem;
-        
-        p {
-            position: absolute;
-            left: .5rem;
-            color: black;
-            transform: rotate(-90deg);
-            transform-origin: bottom left;
-            padding-left: 1.6rem;
-            transition: padding-left .2s ease-in-out;
-
-            &:hover {
-                cursor: pointer;
-                padding-left: 2rem;
-            }
-        }
-    }
+  }
 }

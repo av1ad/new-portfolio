@@ -1,0 +1,17 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-hover {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border-color: map-get($colors, 'primary');
+  }
+}
+
+@mixin responsive-text {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.5;
+}
