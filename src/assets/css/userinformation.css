@@ -1,128 +1,128 @@
 .user-card {
   width: 100%;
-  margin: 0;
+    margin: 0;
   background-color: transparent;
   color: #999999;
   border: 1px solid #999999;
   border-radius: 20px;
-  padding: 1rem 1rem;
+    padding: 2rem;
   display: flex;
   flex-direction: column;
+    max-height: fit-content;
 }
+
 .user-card a {
   text-decoration: none;
   font-weight: 500;
 }
+
 .user-card a:hover {
   color: #a86fcb;
-}
-@media (min-width: 1080px) {
-  .user-card {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 4rem;
-    width: 26rem;
-    max-width: 26rem;
-    padding: 4rem 4rem;
-  }
-}
-.user-card .contact-button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  background-color: #a86fcb;
-  padding: 1rem;
-  border-radius: 40px;
-  color: #1f1f1f;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
-}
-.user-card .contact-button:hover {
-  background-color: transparent;
-  color: #a86fcb;
-  border: 1px solid #a86fcb;
-}
-.user-card__image {
-  height: 18rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-}
-.user-card__image__photo {
-  filter: grayscale(1);
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-}
-.user-card__image__photo:hover {
-  filter: grayscale(0);
 }
 .user-card__header {
   display: flex;
   justify-content: space-between;
+    margin-bottom: 2rem;
 }
 .user-card__header__name {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #FFF;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #FFF;
 }
 .user-card__header__title {
-  text-align: right;
-  line-height: 1.2rem;
+    text-align: right;
+    line-height: 1.2rem;
   color: #a86fcb;
 }
+
+.user-card__image {
+    height: 18rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.user-card__image__photo {
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.user-card__image__photo:hover {
+    filter: grayscale(0);
+}
+
 .user-card__footer {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
+
 .user-card__footer__email {
-  font-size: 1rem;
-  color: #fff;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
-.user-card__footer__resume {
-  font-size: 1.2rem;
-  color: #fff;
+
+.user-card__footer__email:hover {
+    color: #a86fcb;
 }
 
 .user-card__footer__based {
-  font-size: 1.2rem;
-  color: #fff;
-}
-.user-card__footer__copyright {
-  margin-top: 2rem;
-  font-size: 1rem;
-  text-align: center;
-}
-.user-card__social-links {
-  margin-top: 2rem;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
 }
 
-.social-button {
-  border: 1px solid #999999;
-  border-radius: 50%;
-  padding: 0.8rem;
-  color: #fff;
+.user-card__footer__links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0;
 }
-.social-button:hover {
-  cursor: pointer;
-  border: 1px solid #a86fcb;
-  color: #a86fcb;
-}/*# sourceMappingURL=userinformation.css.map */
+
+.user-card__footer__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem;
+    border: 1px solid #565656;
+    border-radius: 50%;
+    color: #999999;
+    background-color: #1f1f1f;
+    transition: all 0.2s ease-in-out;
+}
+
+.user-card__footer__link:hover {
+    color: #a86fcb;
+    border-color: #a86fcb;
+    transform: translateY(-2px);
+}
+
+.user-card__footer__copyright {
+    color: #565656;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 1080px) {
+    .user-card {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4rem;
+        width: 26rem;
+        max-width: 26rem;
+    }
+}

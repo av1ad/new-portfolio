@@ -1,7 +1,7 @@
 import Pdf from "../../assets/Aviad_Churaman_Resume.pdf";
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
-
+import { GitHub, FileText, Linkedin } from 'react-feather'; // Updated imports
 const UserInformationContent = () => {
   return (
     <div className="user-card">
@@ -25,14 +25,35 @@ const UserInformationContent = () => {
           aviadchuraman@gmail.com
         </a>
         <p className="user-card__footer__based">Based in USA</p>
-        <a
-          href={Pdf}
-          target="_blank"
-          className="user-card__footer__resume" 
-          rel="noreferrer"
-        >
-          Resume
-        </a>
+        <div className="user-card__footer__links">
+          <a
+            href={Pdf}
+            target="_blank"
+            className="user-card__footer__link"
+            rel="noreferrer"
+            aria-label="Download Resume"
+          >
+            <FileText size={20} />
+          </a>
+          <a
+            href="https://github.com/av1ad"
+            target="_blank"
+            className="user-card__footer__link"
+            rel="noreferrer"
+            aria-label="Visit GitHub Profile"
+          >
+            <GitHub size={20} />
+          </a>
+          <a
+            href="https://linkedin.com/in/aviad-churaman"
+            target="_blank"
+            className="user-card__footer__link"
+            rel="noreferrer"
+            aria-label="Visit LinkedIn Profile"
+          >
+            <Linkedin size={20} />
+          </a>
+        </div>
         <p className="user-card__footer__copyright">
           © 2024 Aviad Churaman; All rights reserved.
         </p>
