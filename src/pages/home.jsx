@@ -374,7 +374,7 @@ const home = () => {
           </h2>
           <article className="project-card" data-aos="fade-right">
             <a
-              href="https://github.com/jewelsonmyjeans/spotify-application"
+              href="https://github.com/av1ad/spotify-application"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the Spotify Profile Project"
@@ -389,7 +389,9 @@ const home = () => {
             >
               Live Preview
             </a>
-            <p className="highlight">JavaScript, React.js, Node.js, Express.js</p>
+            <p className="highlight">
+              JavaScript, React.js, Node.js, Express.js
+            </p>
             <p>
               This React application utilizes the Spotify API to display a
               user`s top artists, top tracks, recently played tracks, and public
@@ -405,7 +407,7 @@ const home = () => {
           </article>
           <article className="project-card" data-aos="fade-left">
             <a
-              href="https://github.com/jewelsonmyjeans/enjoy-the-outdoors-remake"
+              href="https://github.com/av1ad/enjoy-the-outdoors-remake"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the Enjoying The Outdoors Project"
@@ -413,14 +415,16 @@ const home = () => {
               Enjoying The Outdoors
             </a>
             <a
-              href="https://jewelsonmyjeans.github.io/Capstone2_EnjoyTheOutdoors/"
+              href="https://av1ad.github.io/Capstone2_EnjoyTheOutdoors/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the Enjoying the Outdoors Project"
             >
               Live Preview
             </a>
-            <p className="highlight">HTML, CSS, Bootstrap, ReactJS, JavaScript</p>
+            <p className="highlight">
+              HTML, CSS, Bootstrap, ReactJS, JavaScript
+            </p>
             <p>
               This web application is designed to assist users in discovering
               national parks and mountains. Users have the ability to search for
@@ -437,30 +441,28 @@ const home = () => {
           </article>
           <article className="project-card" data-aos="fade-right">
             <a
-              href="https://github.com/jewelsonmyjeans/CarDealership"
+              href="https://github.com/av1ad/CarDealership"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View the Car Dealership Project"
+              aria-label="View the BookSearcher Project"
             >
-              Car Dealership
+              BookSearcher
             </a>
-            <p className="highlight">Java</p>
+            <p className="highlight">Typescript, Tailwind, NextJS</p>
             <p>
-              The CarDealership application is a simple console-based
-              application developed in Java. It allows users to interact with a
-              virtual car dealership, providing functionalities such as viewing
-              all vehicles, adding a vehicle, removing a vehicle, and finding
-              vehicles based on various criteria.
+              A modern web application built with Next.js that helps users
+              discover books using the OpenLibrary API, featuring book search,
+              randomization, and AI-assisted recommendations.
             </p>
             <img
               src={cardealership}
               className="project-image"
-              alt="Screenshot of the Car Dealership project"
+              alt="Screenshot of the BookSearcher project"
             />
           </article>
           <article className="project-card" data-aos="fade-left">
             <a
-              href="https://github.com/jewelsonmyjeans/ChatterGrape"
+              href="https://github.com/av1ad/ChatterGrape"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View ChatterGrape"
@@ -468,7 +470,7 @@ const home = () => {
               ChatterGrape
             </a>
             <a
-              href="https://jewelsonmyjeans.github.io/ChatterGrape/"
+              href="https://av1ad.github.io/ChatterGrape/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View the Chattergrape Project"
@@ -476,7 +478,9 @@ const home = () => {
               Live Preview
             </a>
 
-            <p className="highlight">HTML, CSS, Bootstrap, JavaScript, REST-API</p>
+            <p className="highlight">
+              HTML, CSS, Bootstrap, JavaScript, REST-API
+            </p>
             <p>
               ChatterGrape allows users to register, login, logout, make post,
               delete post, like post, dislike post, and view their own profiles.
