@@ -123,42 +123,42 @@ const HomePage = () => {
                 <div className="skill__header">
                   <h2>HTML5/CSS3</h2>
                 </div>
-                <LazyImage src="html-icon-url" alt="HTML5 Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/others/html.svg" alt="HTML5 Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>JavaScript (ES6+)</h2>
                 </div>
-                <LazyImage src="js-icon-url" alt="JavaScript Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/programming%20languages/javascript.svg" alt="JavaScript Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>React/Next.js</h2>
                 </div>
-                <LazyImage src="react-icon-url" alt="React Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/frameworks/react.svg" alt="React Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>TypeScript</h2>
                 </div>
-                <LazyImage src="typescript-icon-url" alt="TypeScript Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/programming%20languages/typescript.svg" alt="TypeScript Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>Redux/Context API</h2>
                 </div>
-                <LazyImage src="redux-icon-url" alt="Redux Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/frameworks/redux.svg" alt="Redux Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
-                  <h2>Sass/Tailwind</h2>
+                  <h2>Tailwind</h2>
                 </div>
-                <LazyImage src="sass-icon-url" alt="Sass Logo" />
+                <LazyImage src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2560px-Tailwind_CSS_Logo.svg.png" alt="Tailwind Logo" />
               </article>
 
               {/* Backend */}
@@ -166,21 +166,21 @@ const HomePage = () => {
                 <div className="skill__header">
                   <h2>Node.js/Express</h2>
                 </div>
-                <LazyImage src="node-icon-url" alt="Node.js Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/frameworks/nodejs.svg" alt="Node.js Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>MongoDB/MySQL</h2>
                 </div>
-                <LazyImage src="mongodb-icon-url" alt="MongoDB Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/databases/mongodb.svg" alt="MongoDB Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>RESTful APIs</h2>
                 </div>
-                <LazyImage src="api-icon-url" alt="API Logo" />
+                <LazyImage src="https://cdn-icons-png.flaticon.com/512/103/103093.png" alt="API Logo" />
               </article>
 
               {/* Tools & Others */}
@@ -188,21 +188,21 @@ const HomePage = () => {
                 <div className="skill__header">
                   <h2>Git/GitHub</h2>
                 </div>
-                <LazyImage src="git-icon-url" alt="Git Logo" />
+                <LazyImage src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>Docker</h2>
                 </div>
-                <LazyImage src="docker-icon-url" alt="Docker Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/cloud/docker.svg" alt="Docker Logo" />
               </article>
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
                   <h2>AWS/Vercel</h2>
                 </div>
-                <LazyImage src="aws-icon-url" alt="AWS Logo" />
+                <LazyImage src="https://raw.githubusercontent.com/bablubambal/All_logo_and_pictures/refs/heads/main/cloud/amazon.svg" alt="AWS Logo" />
               </article>
             </div>
           </section>
