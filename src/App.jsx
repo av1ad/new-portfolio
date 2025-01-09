@@ -1,6 +1,5 @@
 import Navbar from './Components/navbar/navbar'
 import Home from './pages/home'
-import Overlay from './Components/overlay/overlay'
 
 import './assets/css/app.css'
 
@@ -9,7 +8,6 @@ function App() {
     <>
       <div>
         <Navbar />
-        <Overlay />
         <Home />
       </div>
     </>

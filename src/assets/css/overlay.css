@@ -2,43 +2,83 @@
   position: fixed;
   max-width: 1440px;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   margin: auto;
+  pointer-events: none;
+  z-index: 10;
 }
-@media (max-width: 479px) {
-  .overlay {
-    visibility: hidden;
-  }
-}
+
 .overlay__social {
-  position: absolute;
-  right: 1rem;
+  position: fixed;
+  right: 4rem;
   bottom: 0;
-  background-color: red;
   width: 1px;
-  height: 6rem;
+  height: 8rem;
+  background-color: #565656;
 }
+
 .overlay__email {
-  position: absolute;
-  left: 0;
+  position: fixed;
+  left: 4rem;
   bottom: 0;
-  background-color: black;
   width: 1px;
-  height: 6rem;
+  height: 8rem;
+  background-color: #565656;
 }
+
 .overlay__email p {
   position: absolute;
-  left: 0.5rem;
-  color: black;
+  bottom: 8rem;
+  left: -2rem;
+  color: #999999;
   transform: rotate(-90deg);
-  transform-origin: bottom left;
-  padding-left: 1.6rem;
-  transition: padding-left 0.2s ease-in-out;
+  transform-origin: left;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  pointer-events: auto;
 }
-.overlay__email p:hover {
-  cursor: pointer;
-  padding-left: 2rem;
-}/*# sourceMappingURL=overlay.css.map */
+
+.overlay__email a {
+  color: #999999;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.overlay__email p:hover a {
+  color: #a86fcb;
+  padding-left: 0.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 1079px) {
+  .overlay {
+    display: none;
+  }
+}
+
+@media (min-width: 1080px) and (max-width: 1399px) {
+  .overlay__email,
+  .overlay__social {
+    width: 1px;
+  }
+  .overlay__email {
+    left: 2rem;
+  }
+  
+  .overlay__social {
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .overlay__email {
+    left: 4rem;
+  }
+  
+  .overlay__social {
+    right: 4rem;
+  }
+}
