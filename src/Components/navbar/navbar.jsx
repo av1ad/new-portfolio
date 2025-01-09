@@ -31,6 +31,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handler = (event) => {
+      event.preventDefault();
       if (navbarOpen && ref.current) {
         if (window.innerWidth < 768) {
           setNavbarOpen(false);
