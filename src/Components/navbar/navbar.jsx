@@ -5,8 +5,9 @@ import { FiMenu } from "react-icons/fi";
 import { Award, Book, Box, Grid, Home, User, Zap } from "react-feather";
 import { Link as ScrollLink } from "react-scroll";
 
-const navbar = () => {
+const Navbar = () => {
   const ref = useRef();
+
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const handleLinkClick = () => {
@@ -192,4 +193,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;
