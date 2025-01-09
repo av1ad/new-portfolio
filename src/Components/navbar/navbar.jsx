@@ -1,24 +1,19 @@
 import { useState, useRef, useEffect } from "react";
-
 import "../../assets/css/navbar.css";
-
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import {
-  Award,
-  Book,
-  Box,
-  Grid,
-  Home,
-  User,
-  Zap,
-} from "react-feather";
+import { Award, Book, Box, Grid, Home, User, Zap } from "react-feather";
 import { Link as ScrollLink } from "react-scroll";
 
 const navbar = () => {
   const ref = useRef();
   const [navbarOpen, setNavbarOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    if (window.innerWidth < 768) {
+      setNavbarOpen(false);
+    }
+  };
   useEffect(() => {
     const handleResize = () => {
       setNavbarOpen(window.innerWidth >= 768);
@@ -27,9 +22,7 @@ const navbar = () => {
     if (window.innerWidth >= 768) {
       setNavbarOpen(true);
     }
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -43,7 +36,6 @@ const navbar = () => {
         }
       }
     };
-    //document.addEventListener('mousedown', handler);
     return () => {
       document.removeEventListener("mousedown", handler);
     };
@@ -77,6 +69,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Introduction Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Home size={16} />
@@ -94,6 +87,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="About Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <User size={16} />
@@ -101,7 +95,6 @@ const navbar = () => {
                 <p>About</p>
               </ScrollLink>
             </li>
-
             <li role="button">
               <ScrollLink
                 className="link-holder"
@@ -112,6 +105,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Skills Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Zap size={16} />
@@ -119,7 +113,6 @@ const navbar = () => {
                 <p>Skills</p>
               </ScrollLink>
             </li>
-
             <li role="button">
               <ScrollLink
                 className="link-holder"
@@ -130,6 +123,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Education Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Book size={16} />
@@ -137,7 +131,6 @@ const navbar = () => {
                 <p>Education</p>
               </ScrollLink>
             </li>
-
             <li role="button">
               <ScrollLink
                 className="link-holder"
@@ -148,6 +141,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Awards Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Award size={16} />
@@ -155,7 +149,6 @@ const navbar = () => {
                 <p>Certificates</p>
               </ScrollLink>
             </li>
-
             <li role="button">
               <ScrollLink
                 className="link-holder"
@@ -166,6 +159,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Projects Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Box size={16} />
@@ -173,7 +167,6 @@ const navbar = () => {
                 <p>Projects</p>
               </ScrollLink>
             </li>
-
             <li role="button">
               <ScrollLink
                 className="link-holder"
@@ -184,6 +177,7 @@ const navbar = () => {
                 duration={500}
                 activeClass="active-link"
                 aria-label="Services Section"
+                onClick={handleLinkClick}
               >
                 <span className="icon-wrapper">
                   <Grid size={16} />

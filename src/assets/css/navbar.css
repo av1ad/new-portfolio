@@ -52,10 +52,8 @@ button {
   right: 0;
   top: 0;
   list-style: none;
-  top: 0;
   background: #fff;
   width: 0;
-  overflow: hidden;
   max-width: 100%;
   z-index: 9;
   font-size: 1.2rem;
@@ -95,6 +93,9 @@ button {
     border: 1px solid #565656;
     transition: transform ease-in-out 0s;
     background-color: #1f1f1f;
+    overflow: hidden;
+    width: auto;
+    max-height: 100vh;
   }
 }
 
@@ -122,6 +123,8 @@ button {
   min-height: 100vh;
   width: 100%;
   opacity: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 @media (max-width: 767px) {
   .menu-nav.show-menu {
@@ -186,6 +189,7 @@ p {
   justify-content: center;
   padding: 2rem;
   padding-left: 4rem;
+  padding-bottom: 100px;
   gap: 2rem;
 }
 @media (min-width: 768px) {
@@ -193,6 +197,18 @@ p {
     padding: 0;
     align-items: center;
     padding: 2rem 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-nav {
+    overflow-y: auto;
+    height: 100vh;
+    padding-bottom: 4rem;
+  }
+  
+  .contact-links {
+    padding-bottom: 60px;
   }
 }
 
@@ -220,11 +236,11 @@ p {
   align-items: center;
   gap: 1rem;
 }
-
 .icon-wrapper {
   cursor: pointer;
 }
 
 .active-link .icon-wrapper {
   color: #a86fcb;
-}/*# sourceMappingURL=navbar.css.map */
+}
+/*# sourceMappingURL=navbar.css.map */
