@@ -1,43 +1,67 @@
 # Aviad Churaman's Portfolio Website
 
-## Overview
+## 🌐 Live Demo
+Visit my portfolio at [aviadchuraman.com](https://aviadchuraman.com)
 
-This repository contains the source code for my personal portfolio website. The website showcases my projects, skills, and professional experience.
+## 📝 Description
+A modern, responsive portfolio website built with React to showcase my professional journey, technical expertise, and project work. The site features a clean, intuitive design with smooth navigation and interactive elements.
 
-## Live Demo
+## ✨ Key Features
 
-The website is live at [aviadchuraman.com](https://aviadchuraman.com)
+- **Responsive Design**: Optimized for all device sizes
+- **Interactive Navigation**: Smooth scrolling and dynamic menu
+- **Portfolio Sections**:
+  - 🏠 Home - Welcome and introduction
+  - 👤 About - Professional background and interests
+  - ⚡ Skills - Technical competencies
+  - 📚 Education - Academic background
+  - 🏅 Certificates - Professional certifications
+  - 💼 Projects - Showcase of development work
+  - 🎯 Skillsets - Specialized capabilities
 
-## Features
+## 🛠️ Tech Stack
 
-- About Me: A section about myself, my background, and my interests.
-- Skills: A list of my technical skills.
-- Education: A timeline of my professional experience.
-- Certificate: A form for visitors to contact me.
-- Projects: A showcase of my projects with links to the GitHub repositories.
-- Skillsets: A list of what I can personal do
+- **Frontend Framework**: React
+- **Styling**: 
+  - SASS/SCSS
+  - CSS3
+  - React Icons
+  - React Scroll
+- **Development Tools**:
+  - Vite
+  - npm
+  - Git
 
-## Tech Stack
+## 🚀 Getting Started
 
-- HTML
-- CSS
-- [SASS](https://sass-lang.com/)
-- JavaScript
-- [React](https://react.dev/)
+### Prerequisites
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-## Running Locally
+### Installation & Setup
 
-To run this website locally, follow these steps:
+1. Clone the repository:
+`git clone https://github.com/av1ad/new-portfolio.git`
 
-1. Clone the repository: `git clone [Your Repository URL]`
-2. Navigate into the directory: `cd [Your Repository Name]`
-3. Open the `index.html` file in your browser.
+2. Navigate to project directory:
+`cd portfolio-website`
 
+3. Install dependencies:
+`npm install`
 
-## License
+4. Start development server:
+`npm run dev`
 
-This project is licensed under the [MIT License](LICENSE).
+5. Build for production:
+`npm run build`
 
-## Contact
+## 🤝 Contributing
+While this is a personal portfolio, suggestions and feedback are welcome. Please feel free to fork the repository and submit pull requests.
 
-If you have any questions, feel free to reach out to me at aviadchuraman@gmail.com
+## 📫 Contact
+- Email: aviadchuraman@gmail.com
+- LinkedIn: [Your LinkedIn Profile]
+- GitHub: [Your GitHub Profile]
+
+## 📄 License
+This project is licensed under the MIT License
