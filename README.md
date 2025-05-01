@@ -60,8 +60,7 @@ While this is a personal portfolio, suggestions and feedback are welcome. Please
 
 ## 📫 Contact
 - Email: aviadchuraman@gmail.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
+- LinkedIn: [https://linkedin.com/in/aviad-churaman]
 
 ## 📄 License
 This project is licensed under the MIT License
