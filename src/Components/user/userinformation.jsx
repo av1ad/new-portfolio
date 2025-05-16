@@ -1,8 +1,11 @@
 import Pdf from "../../assets/Aviad_Churaman_Resume.pdf";
 import "../../assets/css/userinformation.css";
 import userPicture from "../../assets/images/aviad.jpeg";
-import { GitHub, FileText, Linkedin, Mail } from 'react-feather'; // Updated imports
+import { GitHub, FileText, Linkedin, Mail } from "react-feather"; // Updated imports
 const UserInformationContent = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <div className="user-card">
       <section className="user-card__header">
@@ -64,7 +67,7 @@ const UserInformationContent = () => {
           </a>
         </div>
         <p className="user-card__footer__copyright">
-          © 2024 Aviad Churaman; All rights reserved.
+          © {year} Aviad Churaman; All rights reserved.
         </p>
       </section>
     </div>
