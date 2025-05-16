@@ -1,5 +1,5 @@
 import UserInformation from "../Components/user/userinformation";
-import "../assets/css/home.css";
+import "../pages/home.css";
 import { Box, User, Zap, ArrowUp } from "react-feather";
 
 import booksearcher from "../assets/images/booksearcher.png";
@@ -58,22 +58,20 @@ const HomePage = () => {
               </h2>
             </div>
             <h1 className="container__header">
-              Say hi to <span className="highlight">Aviad,</span>
+              <span className="highlight">Aviad Churaman</span>
               <br />
               Software Developer.
             </h1>
             <p>
-              <span className="highlight">Full-stack developer</span>{" "}
+              I'm a<span className="highlight"> Full-stack developer</span>{" "}
               specializing in modern web technologies. Since{" "}
               <span className="highlight">2021</span>, I've been immersed in web
               development, constantly expanding my skillset and tackling
               exciting challenges. Proficient in{" "}
               <span className="highlight">
-                JavaScript, Typescript, React, Node.js, Python
+                JavaScript, Typescript, React/React Native, Node.js, Dino, Python
               </span>
-              , and various modern frameworks. Experienced in building
-              responsive, user-friendly applications with a focus on clean,
-              efficient code.
+              , and various modern frameworks.
             </p>
             <p>
               I combine technical expertise with creative problem-solving to

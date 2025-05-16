@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "../../assets/css/navbar.css";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { Box, Home, User, Zap } from "react-feather";
+import { Box, User, Zap } from "react-feather";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
@@ -61,24 +61,6 @@ const Navbar = () => {
         <div className="inner-menu">
           <h3>Navigation</h3>
           <ul className="contact-links">
-            <li role="button">
-              <ScrollLink
-                className="link-holder"
-                to="introduction"
-                spy={true}
-                smooth={true}
-                offset={-170}
-                duration={500}
-                activeClass="active-link"
-                aria-label="Introduction Section"
-                onClick={handleLinkClick}
-              >
-                <span className="icon-wrapper">
-                  <Home size={16} />
-                </span>
-                <p>Home</p>
-              </ScrollLink>
-            </li>
             <li role="button">
               <ScrollLink
                 className="link-holder"
