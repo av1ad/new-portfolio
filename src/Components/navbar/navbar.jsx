@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import "../../assets/css/navbar.css";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { Award, Book, Box, Grid, Home, User, Zap } from "react-feather";
+import { Box, Home, User, Zap } from "react-feather";
 import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
@@ -118,42 +118,6 @@ const Navbar = () => {
             <li role="button">
               <ScrollLink
                 className="link-holder"
-                to="education"
-                spy={true}
-                smooth={true}
-                offset={-170}
-                duration={500}
-                activeClass="active-link"
-                aria-label="Education Section"
-                onClick={handleLinkClick}
-              >
-                <span className="icon-wrapper">
-                  <Book size={16} />
-                </span>
-                <p>Education</p>
-              </ScrollLink>
-            </li>
-            <li role="button">
-              <ScrollLink
-                className="link-holder"
-                to="awards"
-                spy={true}
-                smooth={true}
-                offset={-170}
-                duration={500}
-                activeClass="active-link"
-                aria-label="Awards Section"
-                onClick={handleLinkClick}
-              >
-                <span className="icon-wrapper">
-                  <Award size={16} />
-                </span>
-                <p>Certificates</p>
-              </ScrollLink>
-            </li>
-            <li role="button">
-              <ScrollLink
-                className="link-holder"
                 to="projects"
                 spy={true}
                 smooth={true}
@@ -167,24 +131,6 @@ const Navbar = () => {
                   <Box size={16} />
                 </span>
                 <p>Projects</p>
-              </ScrollLink>
-            </li>
-            <li role="button">
-              <ScrollLink
-                className="link-holder"
-                to="services"
-                spy={true}
-                smooth={true}
-                offset={-170}
-                duration={500}
-                activeClass="active-link"
-                aria-label="Services Section"
-                onClick={handleLinkClick}
-              >
-                <span className="icon-wrapper">
-                  <Grid size={16} />
-                </span>
-                <p>Skillset</p>
               </ScrollLink>
             </li>
           </ul>
