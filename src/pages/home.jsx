@@ -69,7 +69,8 @@ const HomePage = () => {
               development, constantly expanding my skillset and tackling
               exciting challenges. Proficient in{" "}
               <span className="highlight">
-                JavaScript, Typescript, React/React Native, Node.js, Dino, Python
+                JavaScript, Typescript, React/React Native, Node.js, Dino,
+                Python
               </span>
               , and various modern frameworks.
             </p>
@@ -241,10 +242,15 @@ const HomePage = () => {
                     Live Preview
                   </a>
                 </div>
-                <p className="highlight">Typescript, Tailwind, NextJS</p>
+                <p className="highlight">
+                  Next.js, TypeScript, PostgreSQL, OpenAI API, TailwindCSS
+                </p>
                 <p>
-                  A modern web application built with Next.js that helps users
-                  discover books using the OpenLibrary API.
+                  A comprehensive, modern book discovery platform built with
+                  Next.js that combines traditional search with AI-powered
+                  recommendations. Discover, explore, and curate your personal
+                  book collection with intelligent features and beautiful
+                  design.
                 </p>
                 <LazyImage
                   src={booksearcher}
