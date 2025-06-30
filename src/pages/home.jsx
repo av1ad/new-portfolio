@@ -293,7 +293,7 @@ const HomePage = () => {
               <article className="project-card" data-aos="fade-right">
                 <div className="project-links">
                   <a
-                    href="https://github.com/av1ad/enjoy-the-outdoors-remake"
+                    href="https://enjoy-the-outdoors-woad.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -308,7 +308,7 @@ const HomePage = () => {
                   </a>
                 </div>
                 <p className="highlight">
-                  HTML, CSS, Bootstrap, ReactJS, JavaScript
+                  React.js, Typescript, Bootstrap
                 </p>
                 <p>
                   This web application is designed to assist users in
