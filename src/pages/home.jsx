@@ -293,7 +293,7 @@ const HomePage = () => {
               <article className="project-card" data-aos="fade-right">
                 <div className="project-links">
                   <a
-                    href="https://enjoy-the-outdoors-woad.vercel.app/"
+                    href="https://github.com/av1ad/enjoy-the-outdoors-remake"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -318,38 +318,6 @@ const HomePage = () => {
                   src={enjoyingtheoutdoors}
                   className="project-image"
                   alt="Screenshot of the Enjoying the Outdoors project"
-                />
-              </article>
-
-              <article className="project-card" data-aos="fade-left">
-                <div className="project-links">
-                  <a
-                    href="https://github.com/av1ad/ChatterGrape"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    ChatterGrape
-                  </a>
-                  <a
-                    href="https://av1ad.github.io/ChatterGrape/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Preview
-                  </a>
-                </div>
-                <p className="highlight">
-                  HTML, CSS, Bootstrap, JavaScript, REST-API
-                </p>
-                <p>
-                  ChatterGrape allows users to register, login, logout, make
-                  post, delete post, like post, dislike post, and view their own
-                  profiles.
-                </p>
-                <LazyImage
-                  src={chattergrape}
-                  className="project-image"
-                  alt="Screenshot of the ChatterGrape project"
                 />
               </article>
             </div>
