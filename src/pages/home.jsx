@@ -300,7 +300,7 @@ const HomePage = () => {
                     Enjoying The Outdoors
                   </a>
                   <a
-                    href="https://av1ad.github.io/Capstone2_EnjoyTheOutdoors/"
+                    href="https://enjoy-the-outdoors-woad.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
