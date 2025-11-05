@@ -123,6 +123,16 @@ const HomePage = () => {
 
               <article className="skill" data-aos="fade-right">
                 <div className="skill__header">
+                  <h2>React/Next.js</h2>
+                </div>
+                <LazyImage
+                  src="https://www.iquest.cz/_next/image?url=%2Ftechnology%2Freact-native.png&w=640&q=75"
+                  alt="React Native Logo"
+                />
+              </article>
+
+              <article className="skill" data-aos="fade-right">
+                <div className="skill__header">
                   <h2>TypeScript</h2>
                 </div>
                 <LazyImage
