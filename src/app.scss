@@ -1,16 +1,183 @@
 @import './gvars.scss';
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  background: $background-light;
+  color: $text-light;
+  transition: background 0.3s, color 0.3s;
 }
 
-body {
-    padding: 2rem;
-    font-family: 'Inter', sans-serif;
-    background-color: $background-color;
-    color: #fffbff;
+body.dark-mode {
+  background: $background-dark;
+  color: $text-dark;
+
+  .App {
+    background: #1e1e1e;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  h1, h2, h3 {
+    color: $text-dark;
+  }
+
+  header p {
+    color: $primary-color;
+  }
+
+  .links a {
+    color: $text-dark;
+  }
+
+  li {
+    background: #333;
+  }
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+header,
+section,
+footer {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: $primary-color;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+header p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.user-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+#skills h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+li {
+  background: #eee;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.project-image.loaded {
+  opacity: 1;
+}
+
+.project h3 {
+  margin-top: 0;
+  color: $primary-color;
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links a {
+  background: $primary-color;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.project-links a:hover {
+  background: darken($primary-color, 10%);
+}
+
+footer {
+  text-align: center;
+  color: #666;
+}
+
+.links a {
+  margin: 0 0.5rem;
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: $primary-color;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
