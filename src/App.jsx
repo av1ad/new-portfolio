@@ -4,6 +4,53 @@ import userPicture from './assets/images/aviad.jpeg';
 import booksearcher from './assets/images/booksearcher.png';
 import spotifyprofile from './assets/images/spotify.png';
 import enjoyingtheoutdoors from './assets/images/enjoyingtheoutdoors.png';
+import chattergrape from './assets/images/chattergrape.png';
+import traveljournal from './assets/images/travel-journal.png';
+import Project from './components/Project'; // Import the Project component
+
+
+const projects = [
+  {
+    title: "BookSearcher",
+    image: booksearcher,
+    description: "A comprehensive, modern book discovery platform built with Next.js that combines traditional search with AI-powered recommendations. Discover, explore, and curate your personal book collection with intelligent features and beautiful design.",
+    liveLink: "https://book-searcher-self-six.vercel.app/",
+    codeLink: "https://github.com/av1ad/BookSearcher",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API", "TailwindCSS"]
+  },
+  {
+    title: "Spotify Profile",
+    image: spotifyprofile,
+    description: "This React application utilizes the Spotify API to display a user`s top artists, top tracks, recently played tracks, and public playlists.",
+    liveLink: "https://aviad-spotify-profile-24b1df1946bf.herokuapp.com/",
+    codeLink: "https://github.com/av1ad/spotify-application",
+    technologies: ["JavaScript", "React.js", "Node.js", "Express.js"]
+  },
+  {
+    title: "Enjoying The Outdoors",
+    image: enjoyingtheoutdoors,
+    description: "This web application is designed to assist users in discovering national parks and mountains.",
+    liveLink: "https://enjoy-the-outdoors-woad.vercel.app/",
+    codeLink: "https://github.com/av1ad/enjoy-the-outdoors-remake",
+    technologies: ["React.js", "Typescript", "Bootstrap"]
+  },
+  {
+    title: "Chattergrape",
+    image: chattergrape,
+    description: "Chattergrape is a real-time chat application built using the MERN stack. It features user authentication, one-on-one messaging, and group chats.",
+    liveLink: "https://chattergrape.onrender.com/",
+    codeLink: "https://github.com/av1ad/Chattergrape",
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"]
+  },
+  {
+    title: "Travel Journal",
+    image: traveljournal,
+    description: "A simple travel journal application built with React that allows users to record and display their travel experiences.",
+    liveLink: "https://travel-journal-av1ad.vercel.app/",
+    codeLink: "https://github.com/av1ad/travel-journal",
+    technologies: ["React", "JavaScript", "CSS"]
+  }
+];
 
 const LazyImage = ({ src, alt, className }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -134,42 +181,10 @@ const App = () => {
 
       <section id="projects" className="fade-in-section">
         <h2>Projects</h2>
-        <div className="project">
-          <LazyImage src={booksearcher} alt="BookSearcher" className="project-image" />
-          <h3>BookSearcher</h3>
-          <p>Next.js, TypeScript, PostgreSQL, OpenAI API, TailwindCSS</p>
-          <p>
-            A comprehensive, modern book discovery platform built with Next.js that combines traditional search with
-            AI-powered recommendations. Discover, explore, and curate your personal book collection with intelligent
-            features and beautiful design.
-          </p>
-          <div className="project-links">
-            <a href="https://github.com/av1ad/BookSearcher" target="_blank" rel="noopener noreferrer">Code</a>
-            <a href="https://book-searcher-self-six.vercel.app/" target="_blank" rel="noopener noreferrer">Live Preview</a>
-          </div>
-        </div>
-        <div className="project">
-          <LazyImage src={spotifyprofile} alt="Spotify Profile" className="project-image" />
-          <h3>Spotify Profile</h3>
-          <p>JavaScript, React.js, Node.js, Express.js</p>
-          <p>
-            This React application utilizes the Spotify API to display a user`s top artists, top tracks, recently
-            played tracks, and public playlists.
-          </p>
-          <div className="project-links">
-            <a href="https://github.com/av1ad/spotify-application" target="_blank" rel="noopener noreferrer">Code</a>
-            <a href="https://aviad-spotify-profile-24b1df1946bf.herokuapp.com/" target="_blank" rel="noopener noreferrer">Live Preview</a>
-          </div>
-        </div>
-        <div className="project">
-          <LazyImage src={enjoyingtheoutdoors} alt="Enjoying The Outdoors" className="project-image" />
-          <h3>Enjoying The Outdoors</h3>
-          <p>React.js, Typescript, Bootstrap</p>
-          <p>This web application is designed to assist users in discovering national parks and mountains.</p>
-          <div className="project-links">
-            <a href="https://github.com/av1ad/enjoy-the-outdoors-remake" target="_blank" rel="noopener noreferrer">Code</a>
-            <a href="https://enjoy-the-outdoors-woad.vercel.app/" target="_blank" rel="noopener noreferrer">Live Preview</a>
-          </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <Project key={index} project={project} />
+          ))}
         </div>
       </section>
 

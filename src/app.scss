@@ -100,48 +100,15 @@ li {
   text-align: center;
 }
 
-.project {
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.project-image {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.project-image.loaded {
-  opacity: 1;
-}
-
-.project h3 {
-  margin-top: 0;
-  color: $primary-color;
-}
-
-.project-links {
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.project-links a {
-  background: $primary-color;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
 .project-links a:hover {
   background: darken($primary-color, 10%);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; // Spacing between project cards
+  padding: 20px 0;
 }
 
 footer {
