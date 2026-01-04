@@ -112,14 +112,7 @@ const App = () => {
       <section id="about" className="fade-in-section">
         <h2>About Me</h2>
         <p>
-          I'm a Full-stack developer specializing in modern web technologies. Since 2021, I've been immersed in web
-          development, constantly expanding my skillset and tackling exciting challenges. Proficient in JavaScript,
-          Typescript, React/React Native, Node.js, Deno, Python, and various modern frameworks.
-        </p>
-        <p>
-          I combine technical expertise with creative problem-solving to build innovative digital solutions. When I'm not
-          coding, I play piano, read, and explore my creative side through various hobbies, keeping my mind sharp and my
-          perspective fresh. This balance helps me bring unique solutions to technical challenges.
+          Full-stack developer who loves building cool stuff with JavaScript, TypeScript, React, Node.js, and Python. When I'm not coding, you'll find me playing piano, reading, or diving into random creative projects.
         </p>
       </section>
 
@@ -189,7 +182,6 @@ const App = () => {
       </section>
 
       <footer className="fade-in-section">
-        <p>&copy; {new Date().getFullYear()} Aviad Churaman; All rights reserved.</p>
         <div className="links">
           <a href="mailto:aviadchuraman@gmail.com">Email</a>
           <a href="https://github.com/av1ad" target="_blank" rel="noreferrer">GitHub</a>

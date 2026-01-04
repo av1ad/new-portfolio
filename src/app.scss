@@ -148,3 +148,80 @@ footer {
   border-radius: 5px;
   cursor: pointer;
 }
+
+// Mobile styles
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .App {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #about {
+    text-align: center;
+  }
+
+  #skills {
+    text-align: center;
+
+    h3 {
+      text-align: center;
+    }
+
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    li {
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  footer {
+    text-align: center;
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      a {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+
+  .dark-mode-toggle {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+}
