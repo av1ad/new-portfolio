@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import './app.scss';
 import userPicture from './assets/images/aviad.jpeg';
 import booksearcher from './assets/images/booksearcher.png';
-import spotifyprofile from './assets/images/spotify.png';
 import enjoyingtheoutdoors from './assets/images/enjoyingtheoutdoors.png';
 import chattergrape from './assets/images/chattergrape.png';
-import traveljournal from './assets/images/travel-journal.png';
+import yourfit from './assets/images/yourfit.png';
 import Project from './components/Project'; // Import the Project component
 
 
 const projects = [
+  {
+    title: "YourFit.ai",
+    image: yourfit,
+    description: "An AI-powered fitness app that creates personalized workout plans and provides intelligent fitness coaching.",
+    liveLink: "https://yourfit.ai",
+    codeLink: null,
+    technologies: ["React Native", "TypeScript", "Deno", "Supabase", "OpenAI API", "TensorFlow.js"]
+  },
   {
     title: "BookSearcher",
     image: booksearcher,
@@ -17,14 +24,6 @@ const projects = [
     liveLink: "https://book-searcher-self-six.vercel.app/",
     codeLink: "https://github.com/av1ad/BookSearcher",
     technologies: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API", "TailwindCSS"]
-  },
-  {
-    title: "Spotify Profile",
-    image: spotifyprofile,
-    description: "This React application utilizes the Spotify API to display a user`s top artists, top tracks, recently played tracks, and public playlists.",
-    liveLink: "https://aviad-spotify-profile-24b1df1946bf.herokuapp.com/",
-    codeLink: "https://github.com/av1ad/spotify-application",
-    technologies: ["JavaScript", "React.js", "Node.js", "Express.js"]
   },
   {
     title: "Enjoying The Outdoors",
@@ -41,14 +40,6 @@ const projects = [
     liveLink: "https://chattergrape.onrender.com/",
     codeLink: "https://github.com/av1ad/Chattergrape",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"]
-  },
-  {
-    title: "Travel Journal",
-    image: traveljournal,
-    description: "A simple travel journal application built with React that allows users to record and display their travel experiences.",
-    liveLink: "https://travel-journal-av1ad.vercel.app/",
-    codeLink: "https://github.com/av1ad/travel-journal",
-    technologies: ["React", "JavaScript", "CSS"]
   }
 ];
 
@@ -106,7 +97,7 @@ const App = () => {
       <header className="fade-in-section">
         <LazyImage src={userPicture} alt="Aviad Churaman" className="user-photo" />
         <h1>Aviad Churaman</h1>
-        <p>Software Developer</p>
+        <p>Full-stack Developer</p>
       </header>
 
       <section id="about" className="fade-in-section">
