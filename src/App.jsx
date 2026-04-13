@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './app.scss';
 import userPicture from './assets/images/aviad.jpeg';
 import booksearcher from './assets/images/booksearcher.png';
@@ -7,24 +7,30 @@ import chattergrape from './assets/images/chattergrape.png';
 import yourfit from './assets/images/yourfit.png';
 import Project from './components/Project';
 import GitHubStats from './components/GitHubStats';
+import Navbar from './components/Navbar';
+import Modal from './components/Modal';
 
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+const featuredProject = {
+  title: "YourFit.ai",
+  image: yourfit,
+  description: "An AI-powered fitness app that creates personalized workout plans and provides intelligent fitness coaching. Built with React Native and Deno, powered by Gemini and TensorFlow.js.",
+  liveLink: "https://yourfit.ai",
+  codeLink: null,
+  technologies: ["React Native", "TypeScript", "Deno", "Supabase", "Gemini API", "TensorFlow.js"],
+  metrics: ["Live Product", "AI-Powered", "iOS & Android"]
+};
 
 const projects = [
-  {
-    title: "YourFit.ai",
-    image: yourfit,
-    description: "An AI-powered fitness app that creates personalized workout plans and provides intelligent fitness coaching.",
-    liveLink: "https://yourfit.ai",
-    codeLink: null,
-    technologies: ["React Native", "TypeScript", "Deno", "Supabase", "OpenAI API", "TensorFlow.js"]
-  },
   {
     title: "BookSearcher",
     image: booksearcher,
     description: "A comprehensive, modern book discovery platform built with Next.js that combines traditional search with AI-powered recommendations. Discover, explore, and curate your personal book collection with intelligent features and beautiful design.",
     liveLink: "https://book-searcher-self-six.vercel.app/",
     codeLink: "https://github.com/av1ad/BookSearcher",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API", "TailwindCSS"]
+    technologies: ["Next.js", "TypeScript", "PostgreSQL", "Gemini API", "TailwindCSS"],
+    metrics: ["AI Recommendations", "Full-Stack", "Next.js 14"]
   },
   {
     title: "Enjoying The Outdoors",
@@ -32,7 +38,8 @@ const projects = [
     description: "This web application is designed to assist users in discovering national parks and mountains.",
     liveLink: "https://enjoy-the-outdoors-woad.vercel.app/",
     codeLink: "https://github.com/av1ad/enjoy-the-outdoors-remake",
-    technologies: ["React.js", "Typescript", "Bootstrap"]
+    technologies: ["React.js", "Typescript", "Bootstrap"],
+    metrics: ["National Parks API", "SPA"]
   },
   {
     title: "Chattergrape",
@@ -40,13 +47,68 @@ const projects = [
     description: "Chattergrape is a real-time chat application built using the MERN stack. It features user authentication, one-on-one messaging, and group chats.",
     liveLink: "https://chattergrape.onrender.com/",
     codeLink: "https://github.com/av1ad/Chattergrape",
-    technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"]
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    metrics: ["Real-time", "Group Chat", "MERN Stack"]
   }
 ];
 
+// Update this whenever you start something new
+const currentlyBuilding = {
+  title: "YourFit.ai — App Store Launch",
+  description: "Putting the finishing touches on YourFit.ai before its App Store release. AI-powered fitness coaching, personalized workout plans, and real-time guidance — shipping soon.",
+  tech: ["React Native", "TypeScript", "Deno", "Supabase", "Gemini API", "TensorFlow.js"]
+};
+
+// ─── Typewriter hook ─────────────────────────────────────────────────────────
+
+const ROLES = [
+  "Full-stack Developer",
+  "AI Enthusiast",
+  "Problem Solver",
+  "Building cool stuff",
+];
+
+const useTypewriter = (words, speed = 90, pause = 2000) => {
+  const [text, setText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const current = words[wordIndex % words.length];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        const next = current.slice(0, text.length + 1);
+        setText(next);
+        if (next === current) {
+          setIsPaused(true);
+          setTimeout(() => {
+            setIsPaused(false);
+            setIsDeleting(true);
+          }, pause);
+        }
+      } else {
+        const next = current.slice(0, text.length - 1);
+        setText(next);
+        if (next === '') {
+          setIsDeleting(false);
+          setWordIndex(i => i + 1);
+        }
+      }
+    }, isDeleting ? speed / 2 : speed);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, isPaused, wordIndex, words, speed, pause]);
+
+  return text;
+};
+
+// ─── Lazy image ──────────────────────────────────────────────────────────────
+
 const LazyImage = ({ src, alt, className }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-
   return (
     <img
       src={src}
@@ -58,47 +120,40 @@ const LazyImage = ({ src, alt, className }) => {
   );
 };
 
+// ─── App ─────────────────────────────────────────────────────────────────────
+
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true); // Changed to true for default dark mode
+  const [darkMode, setDarkMode] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const role = useTypewriter(ROLES);
+
+  const toggleDarkMode = useCallback(() => setDarkMode(d => !d), []);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('fade-in');
       });
     });
-
-    const elements = document.querySelectorAll('.fade-in-section');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
+    document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
+    document.body.classList.toggle('dark-mode', darkMode);
   }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
 
   return (
     <div className="App">
-      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
       <header className="fade-in-section">
         <LazyImage src={userPicture} alt="Aviad Churaman" className="user-photo" />
         <h1>Aviad Churaman</h1>
-        <p>Full-stack Developer</p>
+        <p className="typewriter">
+          {role}
+          <span className="cursor">|</span>
+        </p>
       </header>
 
       <section id="about" className="fade-in-section">
@@ -149,7 +204,7 @@ const App = () => {
         </ul>
         <h3>AI/ML</h3>
         <ul>
-          <li>OpenAI GPT Integration</li>
+          <li>Gemini API Integration</li>
           <li>TensorFlow.js</li>
           <li>Natural Language Processing</li>
         </ul>
@@ -168,9 +223,36 @@ const App = () => {
 
       <section id="projects" className="fade-in-section">
         <h2>Projects</h2>
+
+        {/* Featured project */}
+        <div className="featured-project" onClick={() => setSelectedProject(featuredProject)}>
+          <div className="featured-image-wrap">
+            <LazyImage src={featuredProject.image} alt={featuredProject.title} className="featured-image" />
+            <span className="featured-badge">Featured</span>
+          </div>
+          <div className="featured-info">
+            <h3>{featuredProject.title}</h3>
+            <div className="featured-metrics">
+              {featuredProject.metrics.map((m, i) => (
+                <span key={i} className="metric-chip">{m}</span>
+              ))}
+            </div>
+            <p>{featuredProject.description}</p>
+            <div className="project-technologies">
+              {featuredProject.technologies.map((tech, i) => (
+                <span key={i} className="technology-tag">{tech}</span>
+              ))}
+            </div>
+            <div className="project-links" onClick={e => e.stopPropagation()}>
+              <a href={featuredProject.liveLink} target="_blank" rel="noopener noreferrer">Live Preview</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Rest of projects */}
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <Project key={index} project={project} />
+            <Project key={index} project={project} onClick={() => setSelectedProject(project)} />
           ))}
         </div>
       </section>
@@ -187,7 +269,24 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="fade-in-section">
+      <section id="currently-building" className="fade-in-section">
+        <h2>Currently Building</h2>
+        <div className="building-card">
+          <div className="building-status">
+            <span className="status-dot" />
+            <span>In progress</span>
+          </div>
+          <h3>{currentlyBuilding.title}</h3>
+          <p>{currentlyBuilding.description}</p>
+          <div className="building-tech">
+            {currentlyBuilding.tech.map((t, i) => (
+              <span key={i} className="technology-tag">{t}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" className="fade-in-section">
         <div className="links">
           <a href="mailto:aviadchuraman@gmail.com">Email</a>
           <a href="https://github.com/av1ad" target="_blank" rel="noreferrer">GitHub</a>
@@ -195,6 +294,10 @@ const App = () => {
           <a href="/Aviad_Churaman_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
       </footer>
+
+      {selectedProject && (
+        <Modal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      )}
     </div>
   );
 };
