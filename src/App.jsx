@@ -5,7 +5,8 @@ import booksearcher from './assets/images/booksearcher.png';
 import enjoyingtheoutdoors from './assets/images/enjoyingtheoutdoors.png';
 import chattergrape from './assets/images/chattergrape.png';
 import yourfit from './assets/images/yourfit.png';
-import Project from './components/Project'; // Import the Project component
+import Project from './components/Project';
+import GitHubStats from './components/GitHubStats';
 
 
 const projects = [
@@ -115,6 +116,8 @@ const App = () => {
           <li>JavaScript</li>
           <li>Python</li>
           <li>Java</li>
+          <li>Go</li>
+          <li>C++</li>
           <li>HTML5</li>
           <li>CSS3</li>
           <li>SQL</li>
@@ -157,7 +160,7 @@ const App = () => {
           <li>VS Code</li>
           <li>Docker</li>
           <li>CI/CD</li>
-          <li>Vercel</li>
+          <li>Cloudflare</li>
           <li>Stripe</li>
           <li>RevenueCat</li>
         </ul>
@@ -169,6 +172,18 @@ const App = () => {
           {projects.map((project, index) => (
             <Project key={index} project={project} />
           ))}
+        </div>
+      </section>
+
+      <section id="github-activity" className="fade-in-section">
+        <h2>GitHub Activity</h2>
+        <div className="github-stats">
+          <img
+            src="https://github-readme-activity-graph.vercel.app/graph?username=av1ad&theme=tokyo-night&hide_border=true&bg_color=1e1e1e&color=8a4baf&line=8a4baf&point=c084fc"
+            alt="Aviad's GitHub activity graph"
+            className="github-chart"
+          />
+          <GitHubStats username="av1ad" />
         </div>
       </section>
 
