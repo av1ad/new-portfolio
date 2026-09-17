@@ -1,46 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Navbar.scss';
 
 const NAV_LINKS = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'GitHub', href: '#github-activity' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'about', href: '#about' },
+  { label: 'work', href: '#work' },
+  { label: 'now', href: '#now' },
+  { label: 'say hi', href: '#contact' },
 ];
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = ({ theme, toggleTheme }) => {
   const [active, setActive] = useState('');
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    const sections = NAV_LINKS
-      .map(l => document.querySelector(l.href))
+    const sections = ['#hero', ...NAV_LINKS.map(l => l.href)]
+      .map(sel => document.querySelector(sel))
       .filter(Boolean);
-
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) setActive('#' + entry.target.id);
+          if (!entry.isIntersecting) return;
+          setActive(entry.target.id === 'hero' ? '' : '#' + entry.target.id);
         });
       },
-      { rootMargin: '-30% 0px -60% 0px' }
+      { rootMargin: '-35% 0px -55% 0px' }
     );
-
     sections.forEach(s => observer.observe(s));
-    return () => sections.forEach(s => observer.unobserve(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="navbar-inner">
-        <a href="#" className="navbar-brand">AC</a>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Main">
+      <div className="navbar-pill">
+        <a href="#top" className="navbar-brand" aria-label="Back to top">
+          <span className="brand-dot" />
+          aviad
+        </a>
         <div className="navbar-links">
           {NAV_LINKS.map(({ label, href }) => (
             <a key={href} href={href} className={active === href ? 'active' : ''}>
@@ -48,8 +50,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </a>
           ))}
         </div>
-        <button className="navbar-theme" onClick={toggleDarkMode} aria-label="Toggle theme">
-          {darkMode ? '☀️' : '🌙'}
+        <button
+          type="button"
+          className="navbar-theme"
+          onClick={toggleTheme}
+          aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          title={theme === 'dark' ? 'Lights on' : 'Lights off'}
+        >
+          <span className="theme-icon" aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
         </button>
       </div>
     </nav>
