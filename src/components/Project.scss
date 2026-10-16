@@ -1,5 +1,4 @@
 .project {
-  --tilt: -1deg;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,17 +7,12 @@
   border-radius: var(--radius-lg);
   padding: 0.85rem;
   cursor: pointer;
-  box-shadow: 0 3px 0 var(--line-strong), 0 12px 30px -16px var(--shadow-color);
-  transition: transform 0.4s var(--ease-bounce), box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.2s ease;
 
   &:hover,
   &:focus-visible {
-    transform: translateY(-6px) rotate(var(--tilt));
     border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
-    box-shadow: 0 3px 0 var(--line-strong), 0 24px 40px -18px var(--shadow-color);
     outline: none;
-
-    .project-image { transform: scale(1.04); }
   }
 
   .project-frame {
@@ -34,7 +28,7 @@
     object-fit: cover;
     display: block;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.6s var(--ease-out);
+    transition: opacity 0.5s ease;
 
     &.loaded { opacity: 1; }
   }
@@ -64,31 +58,23 @@
     flex: 1;
   }
 
-  .project-technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
+  .tech-list { flex: 0; }
 
   .project-links {
     display: flex;
-    gap: 0.4rem;
+    gap: 1.1rem;
     margin-top: 0.25rem;
 
     a {
       font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--accent);
-      text-decoration: none;
-      padding: 0.3rem 0.7rem;
-      border-radius: 999px;
-      background: color-mix(in srgb, var(--accent) 10%, transparent);
-      transition: background 0.2s, transform 0.2s var(--ease-bounce);
+      font-size: 0.92rem;
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--line-strong);
+      text-underline-offset: 4px;
+      transition: text-decoration-color 0.2s, color 0.2s;
 
-      &:hover {
-        background: color-mix(in srgb, var(--accent) 20%, transparent);
-        transform: translateY(-2px);
-      }
+      &:hover { color: var(--accent); text-decoration-color: var(--accent); }
     }
   }
 }

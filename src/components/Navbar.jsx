@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Sun, Moon } from 'react-feather';
 import './Navbar.scss';
 
 const NAV_LINKS = [
-  { label: 'about', href: '#about' },
-  { label: 'work', href: '#work' },
-  { label: 'now', href: '#now' },
-  { label: 'say hi', href: '#contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Work', href: '#work' },
+  { label: 'Now', href: '#now' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 const Navbar = ({ theme, toggleTheme }) => {
@@ -13,7 +14,7 @@ const Navbar = ({ theme, toggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -38,11 +39,8 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Main">
-      <div className="navbar-pill">
-        <a href="#top" className="navbar-brand" aria-label="Back to top">
-          <span className="brand-dot" />
-          aviad
-        </a>
+      <div className="navbar-inner">
+        <a href="#top" className="navbar-brand">Aviad</a>
         <div className="navbar-links">
           {NAV_LINKS.map(({ label, href }) => (
             <a key={href} href={href} className={active === href ? 'active' : ''}>
@@ -55,9 +53,8 @@ const Navbar = ({ theme, toggleTheme }) => {
           className="navbar-theme"
           onClick={toggleTheme}
           aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-          title={theme === 'dark' ? 'Lights on' : 'Lights off'}
         >
-          <span className="theme-icon" aria-hidden="true">{theme === 'dark' ? '☀️' : '🌙'}</span>
+          {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
         </button>
       </div>
     </nav>

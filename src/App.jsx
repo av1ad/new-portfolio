@@ -10,21 +10,19 @@ import GitHubStats from './components/GitHubStats';
 import Navbar from './components/Navbar';
 import Modal from './components/Modal';
 import Piano from './components/Piano';
-import { Sparkle, Underline, Arrow, Tape } from './components/Doodles';
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const featuredProject = {
   title: 'YourFit.ai',
   image: yourfit,
-  blurb: 'An AI fitness coach in your pocket, live on the App Store. Personalized plans, real-time guidance, and a model that actually adapts to you.',
+  blurb: 'A workout and calorie tracker with an AI coach that writes your training plan and changes it as you go.',
   description:
-    'An AI-powered fitness app, released and actively updated, that creates personalized workout plans and provides intelligent fitness coaching. Built with React Native and Deno, powered by Gemini and TensorFlow.js. Payments through RevenueCat and Stripe, data on Supabase.',
+    'A workout and calorie tracker with an AI coach that writes your training plan and changes it as you go. The app is React Native, the backend runs on Deno with data in Supabase, Gemini and TensorFlow.js handle the AI side, and payments go through RevenueCat and Stripe.',
   liveLink: 'https://yourfit.ai',
   storeLink: 'https://apps.apple.com/us/app/yourfit-calorie-workout-log/id6754610096',
   codeLink: null,
   technologies: ['React Native', 'TypeScript', 'Deno', 'Supabase', 'Gemini API', 'TensorFlow.js'],
-  metrics: ['On the App Store', 'AI-powered', 'Actively updated'],
 };
 
 const projects = [
@@ -37,7 +35,6 @@ const projects = [
     liveLink: 'https://book-searcher-self-six.vercel.app/',
     codeLink: 'https://github.com/av1ad/BookSearcher',
     technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Gemini API', 'TailwindCSS'],
-    metrics: ['AI recommendations', 'Full-stack', 'Next.js 14'],
   },
   {
     title: 'Chattergrape',
@@ -48,7 +45,6 @@ const projects = [
     liveLink: 'https://chattergrape.onrender.com/',
     codeLink: 'https://github.com/av1ad/Chattergrape',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO'],
-    metrics: ['Real-time', 'Group chat', 'MERN'],
   },
   {
     title: 'Enjoying The Outdoors',
@@ -59,7 +55,6 @@ const projects = [
     liveLink: 'https://enjoy-the-outdoors-woad.vercel.app/',
     codeLink: 'https://github.com/av1ad/enjoy-the-outdoors-remake',
     technologies: ['React', 'TypeScript', 'Bootstrap'],
-    metrics: ['National Parks API', 'SPA'],
   },
 ];
 
@@ -76,44 +71,7 @@ const STACK = [
   'Deno', 'PostgreSQL', 'Supabase', 'Python', 'Gemini API',
 ];
 
-const ROLES = [
-  'full-stack developer',
-  'AI tinkerer',
-  'App Store shipper',
-  'occasional pianist',
-  'professional side-project starter',
-];
-
 // ─── Hooks ───────────────────────────────────────────────────────────────────
-
-const useTypewriter = (words, speed = 80, pause = 1900) => {
-  const [text, setText] = useState('');
-  const [wordIndex, setWordIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (isPaused) return;
-    const current = words[wordIndex % words.length];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        const next = current.slice(0, text.length + 1);
-        setText(next);
-        if (next === current) {
-          setIsPaused(true);
-          setTimeout(() => { setIsPaused(false); setIsDeleting(true); }, pause);
-        }
-      } else {
-        const next = current.slice(0, text.length - 1);
-        setText(next);
-        if (next === '') { setIsDeleting(false); setWordIndex(i => i + 1); }
-      }
-    }, isDeleting ? speed / 2.2 : speed);
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, isPaused, wordIndex, words, speed, pause]);
-
-  return text;
-};
 
 const useTheme = () => {
   const [theme, setTheme] = useState(() =>
@@ -127,25 +85,6 @@ const useTheme = () => {
   }, [theme]);
   const toggle = useCallback(() => setTheme(t => (t === 'dark' ? 'light' : 'dark')), []);
   return [theme, toggle];
-};
-
-const useReveal = () => {
-  useEffect(() => {
-    const els = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12 }
-    );
-    els.forEach(el => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
 };
 
 // ─── Bits ────────────────────────────────────────────────────────────────────
@@ -163,81 +102,41 @@ const LazyImage = ({ src, alt, className }) => {
   );
 };
 
-const SectionTitle = ({ note, children }) => (
-  <div className="section-title">
-    {note && <span className="handwritten note">{note}</span>}
-    <h2>{children}</h2>
-  </div>
-);
-
 // ─── App ─────────────────────────────────────────────────────────────────────
 
 const App = () => {
   const [theme, toggleTheme] = useTheme();
   const [selectedProject, setSelectedProject] = useState(null);
-  const [waves, setWaves] = useState(0);
-  const role = useTypewriter(ROLES);
-  useReveal();
 
   const year = new Date().getFullYear();
 
   return (
     <div className="App" id="top">
-      <div className="blob blob-1" aria-hidden="true" />
-      <div className="blob blob-2" aria-hidden="true" />
-      <div className="blob blob-3" aria-hidden="true" />
-
       <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <header id="hero" className="hero">
         <div className="hero-text">
-          <span className="handwritten hero-hello">hey there, i'm</span>
-          <h1>
-            Aviad{' '}
-            <button
-              type="button"
-              className={`wave ${waves ? 'waving' : ''}`}
-              onClick={() => setWaves(w => w + 1)}
-              onAnimationEnd={() => setWaves(0)}
-              aria-label="Wave back"
-              title="wave back!"
-            >
-              👋
-            </button>
-          </h1>
-          <p className="hero-tagline">
-            I build things that <Underline>ship</Underline>.
-          </p>
-          <p className="typewriter" aria-live="polite">
-            <span className="typewriter-prefix">aka</span> {role}
-            <span className="cursor" aria-hidden="true">|</span>
+          <h1>Aviad Churaman</h1>
+          <p className="hero-lede">
+            I'm a full-stack developer. I built{' '}
+            <a href={featuredProject.storeLink} target="_blank" rel="noopener noreferrer">YourFit.ai</a>,
+            an AI fitness app that's on the App Store now, and I'm still shipping updates to it.
           </p>
           <div className="hero-actions">
-            <a href="#work" className="btn btn-primary">see my work</a>
-            <a href="#contact" className="btn btn-ghost">say hi</a>
+            <a href="#work" className="btn btn-primary">See my work</a>
+            <a href="mailto:aviadchuraman@gmail.com" className="btn btn-ghost">Email me</a>
           </div>
-          <a href="https://apps.apple.com/us/app/yourfit-calorie-workout-log/id6754610096" target="_blank" rel="noopener noreferrer" className="hero-pill">
-            <span className="pill-dot" /> <b>YourFit.ai</b> is live · shipping updates ↗
-          </a>
         </div>
 
-        <div className="hero-photo-wrap">
-          <div className="hero-photo">
-            <Tape className="tape-left" />
-            <Tape className="tape-right" />
-            <LazyImage src={userPicture} alt="Aviad Churaman" className="user-photo" />
-            <span className="handwritten photo-caption">me, probably thinking about a side project</span>
-          </div>
-          <Sparkle className="spark spark-1" size={26} />
-          <Sparkle className="spark spark-2" size={16} />
-          <Sparkle className="spark spark-3" size={20} />
+        <div className="hero-photo">
+          <LazyImage src={userPicture} alt="Aviad Churaman" className="user-photo" />
         </div>
       </header>
 
       {/* ── About ────────────────────────────────────────────────────── */}
-      <section id="about" className="section reveal">
-        <SectionTitle note="a little context">about me</SectionTitle>
+      <section id="about" className="section">
+        <h2 className="section-title">About</h2>
         <div className="about-grid">
           <div className="about-copy">
             <p>
@@ -250,47 +149,33 @@ const App = () => {
               I care about products that feel warm and thought-through, which is probably why
               there's a cat following your cursor right now.
             </p>
-            <div className="stack">
-              <span className="handwritten stack-label">my go-to stack</span>
-              <div className="stack-chips">
-                {STACK.map(s => (
-                  <span key={s} className="tag tag-lg">{s}</span>
-                ))}
-              </div>
-            </div>
+            <p className="stack">
+              <b>What I usually reach for:</b> {STACK.join(', ')}.
+            </p>
           </div>
 
           <aside className="off-clock">
-            <span className="handwritten off-clock-title">off the clock</span>
-            <div className="hobby hobby-piano">
-              <span className="hobby-emoji" aria-hidden="true">🎹</span>
-              <div>
-                <b>piano</b>
-                <p>mostly playing by ear. go on, press a key.</p>
-                <Piano />
-              </div>
+            <h3 className="off-clock-title">Off the clock</h3>
+            <div className="hobby">
+              <b>Piano</b>
+              <p>Mostly playing by ear. Go on, press a key.</p>
+              <Piano />
             </div>
             <div className="hobby">
-              <span className="hobby-emoji" aria-hidden="true">📚</span>
-              <div>
-                <b>books</b>
-                <p>a growing to-read pile and a shrinking excuse not to read it.</p>
-              </div>
+              <b>Books</b>
+              <p>A growing to-read pile and a shrinking excuse not to read it.</p>
             </div>
             <div className="hobby">
-              <span className="hobby-emoji" aria-hidden="true">✨</span>
-              <div>
-                <b>random creative projects</b>
-                <p>half-finished, fully enjoyed.</p>
-              </div>
+              <b>Random creative projects</b>
+              <p>Half-finished, fully enjoyed.</p>
             </div>
           </aside>
         </div>
       </section>
 
       {/* ── Work ─────────────────────────────────────────────────────── */}
-      <section id="work" className="section reveal">
-        <SectionTitle note="things i've made">work</SectionTitle>
+      <section id="work" className="section">
+        <h2 className="section-title">Work</h2>
 
         <article
           className="featured"
@@ -302,41 +187,27 @@ const App = () => {
         >
           <div className="featured-media">
             <LazyImage src={featuredProject.image} alt={featuredProject.title} className="featured-image" />
-            <span className="featured-badge">★ featured</span>
           </div>
           <div className="featured-info">
-            <div className="chips">
-              {featuredProject.metrics.map(m => (
-                <span key={m} className="chip">{m}</span>
-              ))}
-            </div>
             <h3>{featuredProject.title}</h3>
             <p>{featuredProject.blurb}</p>
-            <div className="chips">
-              {featuredProject.technologies.map(t => (
-                <span key={t} className="tag">{t}</span>
-              ))}
-            </div>
+            <p className="tech-list">{featuredProject.technologies.join(' · ')}</p>
             <div className="featured-actions" onClick={e => e.stopPropagation()}>
               <a className="btn btn-primary" href={featuredProject.storeLink} target="_blank" rel="noopener noreferrer">
-                 get it on the App Store ↗
+                App Store
               </a>
               <a className="btn btn-ghost" href={featuredProject.liveLink} target="_blank" rel="noopener noreferrer">
-                yourfit.ai ↗
+                yourfit.ai
               </a>
-              <span className="handwritten featured-note">
-                <Arrow /> the big one
-              </span>
             </div>
           </div>
         </article>
 
         <div className="projects-grid">
-          {projects.map((project, index) => (
+          {projects.map(project => (
             <Project
               key={project.title}
               project={project}
-              index={index}
               onClick={() => setSelectedProject(project)}
             />
           ))}
@@ -344,32 +215,24 @@ const App = () => {
       </section>
 
       {/* ── Now ──────────────────────────────────────────────────────── */}
-      <section id="now" className="section reveal">
-        <SectionTitle note="what i'm up to">right now</SectionTitle>
+      <section id="now" className="section">
+        <h2 className="section-title">Right now</h2>
         <div className="now-grid">
           <div className="card building-card">
-            <div className="building-status">
-              <span className="status-dot" /> shipping updates
-            </div>
             <h3>{currentlyBuilding.title}</h3>
             <p>{currentlyBuilding.description}</p>
-            <div className="chips">
-              {currentlyBuilding.tech.map(t => (
-                <span key={t} className="tag">{t}</span>
-              ))}
-            </div>
+            <p className="tech-list">{currentlyBuilding.tech.join(' · ')}</p>
           </div>
           <div className="card github-card">
-            <span className="handwritten card-note">on github</span>
+            <h3>GitHub</h3>
             <GitHubStats username="av1ad" />
           </div>
         </div>
       </section>
 
       {/* ── Contact ──────────────────────────────────────────────────── */}
-      <footer id="contact" className="section contact reveal">
-        <span className="handwritten note">that's the tour</span>
-        <h2>say hi 👋</h2>
+      <footer id="contact" className="section contact">
+        <h2>Say hi</h2>
         <p>
           Got a project, a job, or a strong opinion about piano fingering? My inbox is open.
         </p>
@@ -377,13 +240,11 @@ const App = () => {
           aviadchuraman@gmail.com
         </a>
         <div className="links">
-          <a href="https://github.com/av1ad" target="_blank" rel="noreferrer">github</a>
-          <a href="https://linkedin.com/in/aviad-churaman" target="_blank" rel="noreferrer">linkedin</a>
-          <a href="/Aviad_Churaman_Resume.pdf" target="_blank" rel="noreferrer">resume</a>
+          <a href="https://github.com/av1ad" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/aviad-churaman" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="/Aviad_Churaman_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
         </div>
-        <p className="colophon">
-          © {year} Aviad Churaman · made with React, too much coffee, and a cat that follows your cursor
-        </p>
+        <p className="colophon">© {year} Aviad Churaman</p>
       </footer>
 
       {selectedProject && (

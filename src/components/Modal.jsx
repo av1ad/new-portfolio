@@ -29,23 +29,12 @@ const Modal = ({ project, onClose }) => {
         </div>
         <div className="modal-body">
           <h2>{project.title}</h2>
-          {project.metrics && (
-            <div className="modal-metrics">
-              {project.metrics.map((m, i) => (
-                <span key={i} className="chip">{m}</span>
-              ))}
-            </div>
-          )}
           <p>{project.description}</p>
-          <div className="modal-technologies">
-            {project.technologies.map((tech, i) => (
-              <span key={i} className="tag">{tech}</span>
-            ))}
-          </div>
+          <p className="tech-list">{project.technologies.join(' · ')}</p>
           <div className="modal-links">
             {project.storeLink && (
               <a className="btn btn-primary" href={project.storeLink} target="_blank" rel="noopener noreferrer">
-                 App Store ↗
+                App Store
               </a>
             )}
             {project.liveLink && (
@@ -55,12 +44,12 @@ const Modal = ({ project, onClose }) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {project.storeLink ? 'website ↗' : 'check it out ↗'}
+                {project.storeLink ? 'Website' : 'Live site'}
               </a>
             )}
             {project.codeLink && (
               <a className="btn btn-ghost" href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                peek at the code ↗
+                Code
               </a>
             )}
           </div>
