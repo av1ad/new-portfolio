@@ -21,6 +21,7 @@
   --line: rgba(45, 31, 51, 0.12);
   --line-strong: rgba(45, 31, 51, 0.18);
   --shadow-color: rgba(90, 50, 110, 0.28);
+  --print: #fffdf8;
 
   --radius: 14px;
   --radius-lg: 20px;
@@ -50,6 +51,7 @@
   --line: rgba(255, 255, 255, 0.1);
   --line-strong: rgba(255, 255, 255, 0.16);
   --shadow-color: rgba(0, 0, 0, 0.55);
+  --print: #e8e0d4;
 }
 
 // ─── Reset-ish ───────────────────────────────────────────────────────────────
@@ -214,15 +216,23 @@ h1, h2, h3 {
   margin-top: 0.5rem;
 }
 
+// Reads like a photo print: paper mat, deeper bottom edge, resting slightly crooked
 .hero-photo {
-  width: clamp(220px, 26vw, 300px);
+  width: clamp(220px, 26vw, 290px);
+  padding: 10px 10px 36px;
+  background: var(--print);
+  border-radius: 2px;
+  transform: rotate(2deg);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 12px 28px -12px var(--shadow-color);
 
   .user-photo {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center top;
-    border-radius: var(--radius-lg);
+    border-radius: 1px;
     background: var(--bg-2);
     opacity: 0;
     transition: opacity 0.6s ease;
